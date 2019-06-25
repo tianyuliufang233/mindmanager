@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <title>kubernetes</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #content-info{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #author-info{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        #title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 2px;
+            font-size: 34px;
+            color: #505050;
+        }
+        .text{
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            color: #8c8c8c;
+        }
+        #navBar{
+            width: auto;
+            height: auto;
+            position: fixed;
+            right:0;
+            bottom: 0;
+            background-color: #f0f3f4;
+            overflow-y: auto;
+            text-align: center;
+        }
+        #svg-container{
+            width: 100%;
+            overflow-x: scroll;
+            min-width: 0px;
+            margin: 0 10px;
+        }
+        #nav-thumbs{
+            overflow-y: scroll;
+            padding: 0 5px;
+        }
+        .nav-thumb{
+            position: relative;
+            margin: 10px auto;
+        }
+        .nav-thumb >p{
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+        .nav-thumb >div{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #c6cfd5;
+        }
+        .nav-thumb img{
+            display: block;
+        }
+        #main-content{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #d0cfd8;
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align:center;
+        }
+        #svg-container >svg{
+            display: block;
+            margin:10px auto;
+            margin-bottom: 0;
+        }
+        #copyright{
+            bottom: 0;
+            left: 50%;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #515151;
+        }
+        #copyright >a{
+            text-decoration: none;
+            color: #77C;
+        }
+        .number{
+            position: absolute;
+            top:0;
+            left:0;
+            border-top:22px solid #08a1ef;
+            border-right: 22px solid transparent;
+        }
+        .pagenum{
+            font-size: 12px;
+            color: #fff;
+            position: absolute;
+            top: -23px;
+            left: 2px;
+        }
+            #navBar::-webkit-scrollbar{
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+            #navBar::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+            #navBar::-webkit-scrollbar-thumb{
+            border-radius: 8px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            background-color: #6b6b70;
+        }
+        #navBar::-webkit-scrollbar-thumb:hover{
+            background-color: #4a4a4f;
+        }
+</style>
+  </head>
+  <body>
+    <div id="main-area">
+      <div id="content-info">
+        <div id="content-info">
+          <div id="title">kubernetes</div>
+        </div>
+        <div id="author-info">
+          <div class="text" id="author-name">天雨流芳</div>
+          <div class="text" id="share-time">2019-06-25</div>
+        </div>
+      </div>
+      <div id="main-content">
+        <div id="svg-container"><svg xmlns:ed="https://www.edrawsoft.cn/xml/2017/SVGExtensions/" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns="http://www.w3.org/2000/svg" height="1721" ed:hSpacing="30" xmlns:xlink="http://www.w3.org/1999/xlink" width="1225" ed:vSpacing="30" ed:name="Page-1" id="page1" viewBox="0 0 1225 1721" preserveAspectRadio="xMinYMin meet">
+    <style type="text/css"><![CDATA[
+g[ed\:togtopicid],g[ed\:hyperlink],g[ed\:comment],g[ed\:note] {cursor:pointer;}
+g[id] {-moz-user-select: none;-ms-user-select: none;user-select: none;}
+svg text::selection,svg tspan::selection{background-color: #4285f4;color: #ffffff;fill: #ffffff;}
+.st3 {fill:#303030;font-family:微软雅黑;font-size:12pt}
+.st2 {fill:#454545;font-family:微软雅黑;font-size:10pt}
+.st1 {fill:#ffffff;font-family:微软雅黑;font-size:14pt}
+]]></style>
+    <defs>
+        <linearGradient x2="0%" y2="100%" id="lg1" x1="0%" y1="0%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.25" stop-color="#f0f5f0"/>
+            <stop offset="0.75" stop-color="#e1ebe1"/>
+            <stop offset="1" stop-color="#c8d7c8"/>
+        </linearGradient>
+    </defs>
+    <rect y="0" height="1721" x="0" width="1225" fill="#ffffff"/>
+    <path transform="matrix(1,0,0,1,324,171)" stroke-linecap="round" d="M-13.5,1.6C-2.3,1.6,4.5,-1.6,13.5,-1.6" ed:tosuperid="102" stroke-linejoin="round" id="103" ed:parentid="147" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,395,108)" stroke-linecap="round" d="M-13.5,62C5.4,62,-13.5,-62,13.5,-62" ed:tosuperid="104" stroke-linejoin="round" id="105" ed:parentid="102" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,395,146)" stroke-linecap="round" d="M-13.5,23.3C2.4,23.3,-6.4,-23.3,13.5,-23.3" ed:tosuperid="106" stroke-linejoin="round" id="107" ed:parentid="102" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,100)" stroke-linecap="round" d="M-13.5,23.3C2.4,23.3,-6.4,-23.3,13.5,-23.3" ed:tosuperid="108" stroke-linejoin="round" id="109" ed:parentid="106" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,115)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="110" stroke-linejoin="round" id="111" ed:parentid="106" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,563,108)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="112" stroke-linejoin="round" id="113" ed:parentid="110" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,673,108)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="114" stroke-linejoin="round" id="115" ed:parentid="112" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,131)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="116" stroke-linejoin="round" id="117" ed:parentid="106" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,576,139)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="118" stroke-linejoin="round" id="119" ed:parentid="116" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,146)" stroke-linecap="round" d="M-13.5,-23.3C2.4,-23.3,-6.4,23.3,13.5,23.3" ed:tosuperid="120" stroke-linejoin="round" id="121" ed:parentid="106" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,563,170)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="122" stroke-linejoin="round" id="123" ed:parentid="120" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,395,208)" stroke-linecap="round" d="M-13.5,-38.8C4.6,-38.8,-11.7,38.8,13.5,38.8" ed:tosuperid="124" stroke-linejoin="round" id="125" ed:parentid="102" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,224)" stroke-linecap="round" d="M-13.5,23.3C2.4,23.3,-6.4,-23.3,13.5,-23.3" ed:tosuperid="126" stroke-linejoin="round" id="127" ed:parentid="124" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,239)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="141" stroke-linejoin="round" id="142" ed:parentid="124" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,255)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="143" stroke-linejoin="round" id="144" ed:parentid="124" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,466,270)" stroke-linecap="round" d="M-13.5,-23.3C2.4,-23.3,-6.4,23.3,13.5,23.3" ed:tosuperid="145" stroke-linejoin="round" id="146" ed:parentid="124" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,165,516)" stroke-linecap="round" d="M-40.9,315C7.3,185.2,-51.5,-343.5,68.3,-343.5" ed:tosuperid="147" stroke-linejoin="round" id="148" ed:parentid="101" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,318,1204)" stroke-linecap="round" d="M-13.5,79.1C5.4,79.1,-13.5,-79.1,13.5,-79.1" ed:tosuperid="149" stroke-linejoin="round" id="150" ed:parentid="195" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1032)" stroke-linecap="round" d="M-13.5,93C5.4,93,-13.5,-93,13.5,-93" ed:tosuperid="151" stroke-linejoin="round" id="152" ed:parentid="149" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,514,931)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="153" stroke-linejoin="round" id="154" ed:parentid="151" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,514,947)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="155" stroke-linejoin="round" id="156" ed:parentid="151" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1055)" stroke-linecap="round" d="M-13.5,69.8C5.4,69.8,-13.5,-69.8,13.5,-69.8" ed:tosuperid="157" stroke-linejoin="round" id="158" ed:parentid="149" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,487,986)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="159" stroke-linejoin="round" id="160" ed:parentid="157" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1079)" stroke-linecap="round" d="M-13.5,46.5C5.2,46.5,-13.1,-46.5,13.5,-46.5" ed:tosuperid="161" stroke-linejoin="round" id="162" ed:parentid="149" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,581,1024)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="163" stroke-linejoin="round" id="164" ed:parentid="161" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1133)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="165" stroke-linejoin="round" id="166" ed:parentid="149" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,654,1110)" stroke-linecap="round" d="M-13.5,31C3.7,31,-9.4,-31,13.5,-31" ed:tosuperid="167" stroke-linejoin="round" id="168" ed:parentid="165" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,581,1040)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="169" stroke-linejoin="round" id="170" ed:parentid="161" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,654,1148)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="171" stroke-linejoin="round" id="172" ed:parentid="165" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,738,1133)" stroke-linecap="round" d="M-13.5,23.3C2.4,23.3,-6.4,-23.3,13.5,-23.3" ed:tosuperid="173" stroke-linejoin="round" id="174" ed:parentid="171" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,738,1148)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="175" stroke-linejoin="round" id="176" ed:parentid="171" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,738,1164)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="177" stroke-linejoin="round" id="178" ed:parentid="171" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,738,1179)" stroke-linecap="round" d="M-13.5,-23.3C2.4,-23.3,-6.4,23.3,13.5,23.3" ed:tosuperid="179" stroke-linejoin="round" id="180" ed:parentid="171" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,619,1265)" stroke-linecap="round" d="M-13.5,31C3.7,31,-9.4,-31,13.5,-31" ed:tosuperid="181" stroke-linejoin="round" id="182" ed:parentid="183" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1210)" stroke-linecap="round" d="M-13.5,-85.3C5.4,-85.3,-13.5,85.3,13.5,85.3" ed:tosuperid="183" stroke-linejoin="round" id="184" ed:parentid="149" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,619,1303)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="185" stroke-linejoin="round" id="186" ed:parentid="183" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,703,1288)" stroke-linecap="round" d="M-13.5,23.3C2.4,23.3,-6.4,-23.3,13.5,-23.3" ed:tosuperid="187" stroke-linejoin="round" id="188" ed:parentid="185" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,703,1303)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="189" stroke-linejoin="round" id="190" ed:parentid="185" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,703,1319)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="191" stroke-linejoin="round" id="192" ed:parentid="185" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,703,1334)" stroke-linecap="round" d="M-13.5,-23.3C2.4,-23.3,-6.4,23.3,13.5,23.3" ed:tosuperid="193" stroke-linejoin="round" id="194" ed:parentid="185" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,165,1072)" stroke-linecap="round" d="M-36,-183.3C2.6,-88.2,-41.7,211.8,68.3,211.8" ed:tosuperid="195" stroke-linejoin="round" id="196" ed:parentid="101" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,318,1413)" stroke-linecap="round" d="M-13.5,-130.1C5.4,-130.1,-13.5,130.1,13.5,130.1" ed:tosuperid="197" stroke-linejoin="round" id="198" ed:parentid="195" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1009)" stroke-linecap="round" d="M-13.5,116.3C5.4,116.3,-13.5,-116.3,13.5,-116.3" ed:tosuperid="199" stroke-linejoin="round" id="200" ed:parentid="149" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1474)" stroke-linecap="round" d="M-13.5,69.8C5.4,69.8,-13.5,-69.8,13.5,-69.8" ed:tosuperid="201" stroke-linejoin="round" id="202" ed:parentid="197" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1505)" stroke-linecap="round" d="M-13.5,38.8C4.6,38.8,-11.7,-38.8,13.5,-38.8" ed:tosuperid="203" stroke-linejoin="round" id="204" ed:parentid="197" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1536)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="205" stroke-linejoin="round" id="206" ed:parentid="197" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,505,1396)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="207" stroke-linejoin="round" id="208" ed:parentid="201" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,505,1412)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="209" stroke-linejoin="round" id="210" ed:parentid="201" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,558,1458)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="213" stroke-linejoin="round" id="214" ed:parentid="203" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,558,1474)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="215" stroke-linejoin="round" id="216" ed:parentid="203" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,652,1520)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="217" stroke-linejoin="round" id="218" ed:parentid="205" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,652,1536)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="219" stroke-linejoin="round" id="220" ed:parentid="205" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,415,1590)" stroke-linecap="round" d="M-13.5,-46.5C5.2,-46.5,-13.1,46.5,13.5,46.5" ed:tosuperid="221" stroke-linejoin="round" id="222" ed:parentid="197" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,564,1606)" stroke-linecap="round" d="M-13.5,31C3.7,31,-9.4,-31,13.5,-31" ed:tosuperid="223" stroke-linejoin="round" id="224" ed:parentid="221" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,564,1621)" stroke-linecap="round" d="M-13.5,15.5C0.8,15.5,-2.8,-15.5,13.5,-15.5" ed:tosuperid="225" stroke-linejoin="round" id="226" ed:parentid="221" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,564,1644)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="227" stroke-linejoin="round" id="228" ed:parentid="221" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,564,1668)" stroke-linecap="round" d="M-13.5,-31C3.7,-31,-9.4,31,13.5,31" ed:tosuperid="229" stroke-linejoin="round" id="230" ed:parentid="221" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,900,1644)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="231" stroke-linejoin="round" id="232" ed:parentid="227" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,631,1575)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="233" stroke-linejoin="round" id="234" ed:parentid="223" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,900,1660)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="235" stroke-linejoin="round" id="236" ed:parentid="227" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,819,1699)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="237" stroke-linejoin="round" id="238" ed:parentid="229" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,324,249)" stroke-linecap="round" d="M-13.5,-75.9C5.4,-75.9,-13.5,75.9,13.5,75.9" ed:tosuperid="239" stroke-linejoin="round" id="240" ed:parentid="147" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,165,728)" stroke-linecap="round" d="M-32,103.3C-0.5,35.1,-16.6,-131.8,68.3,-131.8" ed:tosuperid="241" stroke-linejoin="round" id="242" ed:parentid="101" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,389,410)" stroke-linecap="round" d="M-13.5,28C3.2,28,-8.3,-28,13.5,-28" ed:tosuperid="243" stroke-linejoin="round" id="244" ed:parentid="251" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,389,426)" stroke-linecap="round" d="M-13.5,12.5C0.2,12.5,-1.3,-12.5,13.5,-12.5" ed:tosuperid="245" stroke-linejoin="round" id="246" ed:parentid="251" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,389,451)" stroke-linecap="round" d="M-13.5,-12.5C0.2,-12.5,-1.3,12.5,13.5,12.5" ed:tosuperid="247" stroke-linejoin="round" id="248" ed:parentid="251" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,389,466)" stroke-linecap="round" d="M-13.5,-28C3.2,-28,-8.3,28,13.5,28" ed:tosuperid="249" stroke-linejoin="round" id="250" ed:parentid="251" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,318,517)" stroke-linecap="round" d="M-13.5,79.1C5.4,79.1,-13.5,-79.1,13.5,-79.1" ed:tosuperid="251" stroke-linejoin="round" id="252" ed:parentid="241" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,318,623)" stroke-linecap="round" d="M-13.5,-26.4C2.9,-26.4,-7.7,26.4,13.5,26.4" ed:tosuperid="253" stroke-linejoin="round" id="254" ed:parentid="241" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,473,610)" stroke-linecap="round" d="M-13.5,38.8C4.6,38.8,-11.7,-38.8,13.5,-38.8" ed:tosuperid="255" stroke-linejoin="round" id="256" ed:parentid="253" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,591,548)" stroke-linecap="round" d="M-13.5,23.3C2.4,23.3,-6.4,-23.3,13.5,-23.3" ed:tosuperid="257" stroke-linejoin="round" id="258" ed:parentid="255" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,591,564)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="259" stroke-linejoin="round" id="260" ed:parentid="255" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,591,579)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="261" stroke-linejoin="round" id="262" ed:parentid="255" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,591,595)" stroke-linecap="round" d="M-13.5,-23.3C2.4,-23.3,-6.4,23.3,13.5,23.3" ed:tosuperid="263" stroke-linejoin="round" id="264" ed:parentid="255" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,473,680)" stroke-linecap="round" d="M-13.5,-31C3.7,-31,-9.4,31,13.5,31" ed:tosuperid="265" stroke-linejoin="round" id="266" ed:parentid="253" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,590,680)" stroke-linecap="round" d="M-13.5,31C3.7,31,-9.4,-31,13.5,-31" ed:tosuperid="267" stroke-linejoin="round" id="268" ed:parentid="265" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,590,696)" stroke-linecap="round" d="M-13.5,15.5C0.8,15.5,-2.8,-15.5,13.5,-15.5" ed:tosuperid="269" stroke-linejoin="round" id="270" ed:parentid="265" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,590,711)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="271" stroke-linejoin="round" id="272" ed:parentid="265" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,590,727)" stroke-linecap="round" d="M-13.5,-15.5C0.8,-15.5,-2.8,15.5,13.5,15.5" ed:tosuperid="273" stroke-linejoin="round" id="274" ed:parentid="265" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,590,742)" stroke-linecap="round" d="M-13.5,-31C3.7,-31,-9.4,31,13.5,31" ed:tosuperid="275" stroke-linejoin="round" id="276" ed:parentid="265" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,318,708)" stroke-linecap="round" d="M-13.5,-111.6C5.4,-111.6,-13.5,111.6,13.5,111.6" ed:tosuperid="277" stroke-linejoin="round" id="278" ed:parentid="241" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,516,812)" stroke-linecap="round" d="M-13.5,7.8C-0.9,7.8,1.2,-7.8,13.5,-7.8" ed:tosuperid="279" stroke-linejoin="round" id="280" ed:parentid="277" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,516,827)" stroke-linecap="round" d="M-13.5,-7.8C-0.9,-7.8,1.2,7.8,13.5,7.8" ed:tosuperid="281" stroke-linejoin="round" id="282" ed:parentid="277" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,675,804)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="283" stroke-linejoin="round" id="284" ed:parentid="279" stroke="#696969" fill="none"/>
+    <path transform="matrix(1,0,0,1,664,835)" stroke-linecap="round" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="285" stroke-linejoin="round" id="286" ed:parentid="281" stroke="#696969" fill="none"/>
+    <g transform="matrix(1,0,0,1,23,831)" ed:topictype="mainidea" ed:width="147" ed:layout="map" ed:height="57" id="101">
+        <path d="M4,0L143,0C145.2,0,147,1.8,147,4L147,53C147,55.2,145.2,57,143,57L4,57C1.8,57,0,55.2,0,53L0,4C0,1.8,1.8,0,4,0z" stroke-linejoin="round" stroke-width="3" fill="#435fbc" stroke="#435fbc"/>
+        <text class="st1">
+            <tspan style="white-space:pre" y="34.5" x="21">kubernetes</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,337,145)" ed:width="44" ed:layout="rightmap" ed:height="24.5" id="102" ed:parentid="147">
+        <path d="M0,24.5L44,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">定义</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,408,21)" ed:width="369" ed:layout="rightmap" ed:height="24.5" id="104" ed:parentid="102">
+        <path d="M0,24.5L369,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">是一个可移植、可扩展的开源平台，用于管理容器化工作负载</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,408,99)" ed:width="44" ed:layout="rightmap" ed:height="24.5" id="106" ed:parentid="102">
+        <path d="M0,24.5L44,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">背景</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,52)" ed:width="476" ed:layout="rightmap" ed:height="24.5" id="108" ed:parentid="106">
+        <path d="M0,24.5L476,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">名字源于希腊语，意思是舵手或飞行员，建立在谷歌15年生产运行经验的基础上</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,83)" ed:width="70" ed:layout="rightmap" ed:height="24.5" id="110" ed:parentid="106">
+        <path d="M0,24.5L70,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">传统部署</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,576,83)" ed:width="83" ed:layout="rightmap" ed:height="24.5" id="112" ed:parentid="110">
+        <path d="M0,24.5L83,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">物理服务器</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,686,83)" ed:width="317" ed:layout="rightmap" ed:height="24.5" id="114" ed:parentid="112">
+        <path d="M0,24.5L317,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">无法定义资源边界，会导致资源分配不均，无扩展性</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,114)" ed:width="83" ed:layout="rightmap" ed:height="24.5" id="116" ed:parentid="106">
+        <path d="M0,24.5L83,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">虚拟化部署</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,589,114)" ed:width="291" ed:layout="rightmap" ed:height="24.5" id="118" ed:parentid="116">
+        <path d="M0,24.5L291,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">可以更好地利用物理资源，实现更好的可扩展性</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,145)" ed:width="70" ed:layout="rightmap" ed:height="24.5" id="120" ed:parentid="106">
+        <path d="M0,24.5L70,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">容器部署</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,576,145)" ed:width="279" ed:layout="rightmap" ed:height="24.5" id="122" ed:parentid="120">
+        <path d="M0,24.5L279,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">具有宽松的隔离属性，可以跨云和os分发移植</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,408,223)" ed:width="44" ed:layout="rightmap" ed:height="24.5" id="124" ed:parentid="102">
+        <path d="M0,24.5L44,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">优势</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,176)" ed:width="96" ed:layout="rightmap" ed:height="24.5" id="126" ed:parentid="124">
+        <path d="M0,24.5L96,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">不限工作负载</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,207)" ed:width="127" ed:layout="rightmap" ed:height="24.5" id="141" ed:parentid="124">
+        <path d="M0,24.5L127,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">持续集成（ci/cd）</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,238)" ed:width="174" ed:layout="rightmap" ed:height="24.5" id="143" ed:parentid="124">
+        <path d="M0,24.5L174,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">系统自我修复，管理，维护</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,479,269)" ed:width="148" ed:layout="rightmap" ed:height="24.5" id="145" ed:parentid="124">
+        <path d="M0,24.5L148,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">可组合的控制流程组成</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,233,154)" ed:width="77" ed:layout="rightmap" ed:height="37" id="147" ed:parentid="101">
+        <path d="M4,0L73,0C75.2,0,77,1.8,77,4L77,33C77,35.2,75.2,37,73,37L4,37C1.8,37,0,35.2,0,33L0,4C0,1.8,1.8,0,4,0z" stroke-linejoin="round" fill="#ebecf3" stroke="#ebecf3"/>
+        <text class="st3">
+            <tspan style="white-space:pre" y="23.4" x="18">what</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,331,1101)" ed:width="70" ed:layout="rightmap" ed:height="24.5" id="149" ed:parentid="195">
+        <path d="M0,24.5L70,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">主要组件</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,915)" ed:width="72" ed:layout="rightmap" ed:height="24.5" id="151" ed:parentid="149">
+        <path d="M0,24.5L72,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kube-api</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,527,899)" ed:width="284" ed:layout="rightmap" ed:height="24.5" id="153" ed:parentid="151">
+        <path d="M0,24.5L284,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">暴露master上的组件，是kubernetes的第一步</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,527,930)" ed:width="148" ed:layout="rightmap" ed:height="24.5" id="155" ed:parentid="151">
+        <path d="M0,24.5L148,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">旨在水平扩展（集群）</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,961)" ed:width="45" ed:layout="rightmap" ed:height="24.5" id="157" ed:parentid="149">
+        <path d="M0,24.5L45,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">etcd</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,500,961)" ed:width="276" ed:layout="rightmap" ed:height="24.5" id="159" ed:parentid="157">
+        <path d="M0,24.5L276,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">用于kubernetes的所有集群数据后备储储</tspan>
+        </text>
+        <g ed:hyperlink="[&#xa;    {&#xa;        &quot;desc&quot;: &quot;https://etcd.io/docs/v3.3.12/rfc/&quot;,&#xa;        &quot;link&quot;: &quot;159&quot;&#xa;    }&#xa;]&#xa;">
+            <use transform="translate(250,4)" xlink:href="#hyperlink"/>
+        </g>
+    </g>
+    <symbol id="hyperlink">
+        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTJGODZDMEQ5Nzg0MTFFN0E1QkQ5MTVGMzVENEU0NjUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTJGODZDMEM5Nzg0MTFFN0E1QkQ5MTVGMzVENEU0NjUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjQ3NTkzRDY0Q0RBMTFFN0E1OTFFREQ1OEEwMjU2QjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjQ3NTkzRDc0Q0RBMTFFN0E1OTFFREQ1OEEwMjU2QjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz56C9ycAAAC/klEQVR42oxTa0iTYRR+3m/f7mnNSyOjqZWmCEWXlegyLy0wIoJIiKQoqB/9KIruU5yioBlEGV0lf1RgdKGCDE1zK+clSQO10pU6M811ma7UzX2XXgdBJljn/Hjh5TnPOTznOQSiCBcn7L5d8+HC2+9jKn24BjsSdGZ94bNcKcdA4MfxO0QCTMhkUHlEcEopWg4mgB3hhaN5TR9PN9gcCAhUoMn+HW++/DBbDiWxxuK6bPwj2JrmT3kNVe+xZ0MUMlbNR3OPC6Y77eC8YlblEQMxFj3NmomA6Xd7FCIrwfrYUAQoWKTSt2BbHF50fkXh43em2pMb8mYk0C8KhkizvPGj/6PbOQpOBA5vWoxnHV9wq7EvuzEnPZZIFCCMHITmFIL4RUG5+1Ii8KBlAKXWHnR/HUXO/Q50D41BF6pCfde3SZwe/kIybQJJtSrNUrJ9GeF4MbmszoGwOUqEB6vw6NUAJjgBSTEh0EcGXU2NnRtxLD2aXKnrcUnpiIJUgsH4BZDojLtx3WK3XNy1kvAgyTdsfRgZ92HUy4ETRMgpsKLtc+bDlsGdDEMOnMtYRvHd1ikEdNm4VuuwXNq1nGjU0uQ3A25EzwuEdrYcrb3D+DzswSwFg6p2J3iCZNoMpTaHdZKAJBY9B3xe8JwEooxF48m1UUNuj0EbqBgrrOgsr2kfwk8vjy0rwigJi5v1fdhjCMfelIVmqceXy/4tSmKBxS6Igt1mSsloc4wgLEiJpQvm4G5zPwq2xvmLy6y9kCpZsy9eB2aarIQuijBgCLEnxYSia+AnIkPUyNocA12werIz0unol6s/oN45amb+LuZlSvByFdacedmamajLX0eNVfy4E0pqtsVz1X5YJnUsoQK/bh0EO5PLUs+/yq7cv5wRBPGU6V4HCmiD1ZEa1L51+j0RolEMTxVRLqXXIaO+/ONYPGOoPGrIL3rSZapuG0IgvUI3XXNqnBbHN0bvZfEfkXa2PqvpRBIXq52V09zrwhJtwI+dhvAjxpKXpb8EGAC1AzS9LEFQkQAAAABJRU5ErkJggg==" height="16" width="16"/>
+    </symbol>
+    <g transform="matrix(1,0,0,1,428,1008)" ed:width="139" ed:layout="rightmap" ed:height="24.5" id="161" ed:parentid="149">
+        <path d="M0,24.5L139,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kube-scheduler调度</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,594,992)" ed:width="471" ed:layout="rightmap" ed:height="24.5" id="163" ed:parentid="161">
+        <path d="M0,24.5L471,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">主服务器上的组件，用于监控为创建节点的新建pod，并选择一个节点供其运行</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,1116)" ed:width="212" ed:layout="rightmap" ed:height="24.5" id="165" ed:parentid="149">
+        <path d="M0,24.5L212,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kube-controller-manager控制器</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,667,1054)" ed:width="278" ed:layout="rightmap" ed:height="24.5" id="167" ed:parentid="165">
+        <path d="M0,24.5L278,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">主服务器组件，每个控制器都是单独的过程，</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,594,1023)" ed:width="473" ed:layout="rightmap" ed:height="24.5" id="169" ed:parentid="161">
+        <path d="M0,24.5L473,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">决策因素包括资源需求，软硬件策略约束，亲和力和反亲和力，数据位置，负载</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,667,1132)" ed:width="57" ed:layout="rightmap" ed:height="24.5" id="171" ed:parentid="165">
+        <path d="M0,24.5L57,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">控制器</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,751,1085)" ed:width="174" ed:layout="rightmap" ed:height="24.5" id="173" ed:parentid="171">
+        <path d="M0,24.5L174,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">节点控制器：监控节点故障</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,751,1116)" ed:width="382" ed:layout="rightmap" ed:height="24.5" id="175" ed:parentid="171">
+        <path d="M0,24.5L382,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">复制控制器：为系统每个复制控制器对象维护正确数量的数据包</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,751,1147)" ed:width="317" ed:layout="rightmap" ed:height="24.5" id="177" ed:parentid="171">
+        <path d="M0,24.5L317,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">端点控制器：填充端点对象（即，连接服务和窗格）</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,751,1178)" ed:width="413" ed:layout="rightmap" ed:height="24.5" id="179" ed:parentid="171">
+        <path d="M0,24.5L413,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">服务账户和令牌控制器：为新的命名空间创建默认账户和api访问令牌</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,632,1209)" ed:width="187" ed:layout="rightmap" ed:height="24.5" id="181" ed:parentid="183">
+        <path d="M0,24.5L187,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">与底层云提供商交互的控制器</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,1271)" ed:width="177" ed:layout="rightmap" ed:height="24.5" id="183" ed:parentid="149">
+        <path d="M0,24.5L177,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">cloud-controller-manager</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,632,1287)" ed:width="57" ed:layout="rightmap" ed:height="24.5" id="185" ed:parentid="183">
+        <path d="M0,24.5L57,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">控制器</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,716,1240)" ed:width="460" ed:layout="rightmap" ed:height="24.5" id="187" ed:parentid="185">
+        <path d="M0,24.5L460,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">节点控制器：用于检查云提供商，以确定节点在停止响应后是否已在云中删除</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,716,1271)" ed:width="291" ed:layout="rightmap" ed:height="24.5" id="189" ed:parentid="185">
+        <path d="M0,24.5L291,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">路由控制器：用于在底层云基础架构中设置路由</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,716,1302)" ed:width="343" ed:layout="rightmap" ed:height="24.5" id="191" ed:parentid="185">
+        <path d="M0,24.5L343,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">服务控制器：用于创建，更新和删除云提供商负载均衡器</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,716,1333)" ed:width="395" ed:layout="rightmap" ed:height="24.5" id="193" ed:parentid="185">
+        <path d="M0,24.5L395,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">卷控制器：用于创建，附加和装载卷，以及云提供商交互以协调卷</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,233,1265)" ed:width="71" ed:layout="rightmap" ed:height="37" id="195" ed:parentid="101">
+        <path d="M4,0L67,0C69.2,0,71,1.8,71,4L71,33C71,35.2,69.2,37,67,37L4,37C1.8,37,0,35.2,0,33L0,4C0,1.8,1.8,0,4,0z" stroke-linejoin="round" fill="#ebecf3" stroke="#ebecf3"/>
+        <text class="st3">
+            <tspan style="white-space:pre" y="23.4" x="18">组件</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,331,1519)" ed:width="70" ed:layout="rightmap" ed:height="24.5" id="197" ed:parentid="195">
+        <path d="M0,24.5L70,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">节点组件</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,868)" ed:width="304" ed:layout="rightmap" ed:height="24.5" id="199" ed:parentid="149">
+        <path d="M0,24.5L304,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">设置脚本通常会在同一台计算机上启动所有主组件</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,1380)" ed:width="63" ed:layout="rightmap" ed:height="24.5" id="201" ed:parentid="197">
+        <path d="M0,24.5L63,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kubelet</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,1442)" ed:width="116" ed:layout="rightmap" ed:height="24.5" id="203" ed:parentid="197">
+        <path d="M0,24.5L116,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kube-prox(代理)</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,1504)" ed:width="210" ed:layout="rightmap" ed:height="24.5" id="205" ed:parentid="197">
+        <path d="M0,24.5L210,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">container  runtime（容器运行）</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,518,1364)" ed:width="343" ed:layout="rightmap" ed:height="24.5" id="207" ed:parentid="201">
+        <path d="M0,24.5L343,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">在集群中的每个节点上运行代理，确保容器在节点上运行</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,518,1395)" ed:width="404" ed:layout="rightmap" ed:height="24.5" id="209" ed:parentid="201">
+        <path d="M0,24.5L404,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">确保podspecs在容器中运行，不管理不是由kubernetes创建的容器</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,571,1426)" ed:width="278" ed:layout="rightmap" ed:height="24.5" id="213" ed:parentid="203">
+        <path d="M0,24.5L278,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">在每个节点上运行的网络代理，负责请求转发</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,571,1457)" ed:width="333" ed:layout="rightmap" ed:height="24.5" id="215" ed:parentid="203">
+        <path d="M0,24.5L333,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">通过维护主机上的网络规则来转发kubernetes服务抽象</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,665,1488)" ed:width="135" ed:layout="rightmap" ed:height="24.5" id="217" ed:parentid="205">
+        <path d="M0,24.5L135,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">负责运行容器的软件</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,665,1519)" ed:width="365" ed:layout="rightmap" ed:height="24.5" id="219" ed:parentid="205">
+        <path d="M0,24.5L365,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">支持：docker，containerd，cri-o，rktlet，kubernetes cri</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,428,1612)" ed:width="122" ed:layout="rightmap" ed:height="24.5" id="221" ed:parentid="197">
+        <path d="M0,24.5L122,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">addones（插件）</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,577,1550)" ed:width="40" ed:layout="rightmap" ed:height="24.5" id="223" ed:parentid="221">
+        <path d="M0,24.5L40,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">dns</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,577,1581)" ed:width="123" ed:layout="rightmap" ed:height="24.5" id="225" ed:parentid="221">
+        <path d="M0,24.5L123,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">web ui（仪表盘）</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,577,1628)" ed:width="309" ed:layout="rightmap" ed:height="24.5" id="227" ed:parentid="221">
+        <path d="M0,24.5L309,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">container resource monitoring（容器资源监测）</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,577,1674)" ed:width="228" ed:layout="rightmap" ed:height="24.5" id="229" ed:parentid="221">
+        <path d="M0,24.5L228,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">cluster-level logging(集群日志记录)</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,913,1612)" ed:width="291" ed:layout="rightmap" ed:height="24.5" id="231" ed:parentid="227">
+        <path d="M0,24.5L291,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">记录有关中央数据库中容器的通用时间序列度量</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,644,1550)" ed:width="131" ed:layout="rightmap" ed:height="24.5" id="233" ed:parentid="223">
+        <path d="M0,24.5L131,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">每个集群都需要dns</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,913,1643)" ed:width="133" ed:layout="rightmap" ed:height="24.5" id="235" ed:parentid="227">
+        <path d="M0,24.5L133,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">通过浏览改数据的ui</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,832,1674)" ed:width="291" ed:layout="rightmap" ed:height="24.5" id="237" ed:parentid="229">
+        <path d="M0,24.5L291,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">负责保存容器日志，中央日志存储的搜索和浏览</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,337,300)" ed:width="487" ed:layout="rightmap" ed:height="24.5" id="239" ed:parentid="147">
+        <path d="M0,24.5L487,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">是一个开源容器编排引擎，用于自动化应用程序的部署，扩展和管理，由cnfc托管</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,233,578)" ed:width="71" ed:layout="rightmap" ed:height="37" id="241" ed:parentid="101">
+        <path d="M4,0L67,0C69.2,0,71,1.8,71,4L71,33C71,35.2,69.2,37,67,37L4,37C1.8,37,0,35.2,0,33L0,4C0,1.8,1.8,0,4,0z" stroke-linejoin="round" fill="#ebecf3" stroke="#ebecf3"/>
+        <text class="st3">
+            <tspan style="white-space:pre" y="23.4" x="18">概念</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,402,358)" ed:width="404" ed:layout="rightmap" ed:height="24.5" id="243" ed:parentid="251">
+        <path d="M0,24.5L404,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">api 描述集群状态：工作负载，使用的镜像，副本数，网络，和磁盘</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,402,389)" ed:width="411" ed:layout="rightmap" ed:height="24.5" id="245" ed:parentid="251">
+        <path d="M0,24.5L411,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">通过api与集群交互，通过pod生命周期事件生成器（pleg）控制状态</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,402,420)" ed:width="514" ed:layout="rightmap" ed:height="43.5" id="247" ed:parentid="251">
+        <path d="M0,43.5L514,43.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kubernetes master：被指定为主控节点上运行kube-apiserver,kube-controller-</tspan>
+            <tspan style="white-space:pre" y="35.1" x="8">manager及kube-scheduler的集合</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,402,470)" ed:width="371" ed:layout="rightmap" ed:height="24.5" id="249" ed:parentid="251">
+        <path d="M0,24.5L371,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">集群非主节点都运行kubelet（与master通信）、kube-proxy</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,331,414)" ed:width="44" ed:layout="rightmap" ed:height="24.5" id="251" ed:parentid="241">
+        <path d="M0,24.5L44,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">概览</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,331,625)" ed:width="128" ed:layout="rightmap" ed:height="24.5" id="253" ed:parentid="241">
+        <path d="M0,24.5L128,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kubernetes object</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,486,547)" ed:width="91" ed:layout="rightmap" ed:height="24.5" id="255" ed:parentid="253">
+        <path d="M0,24.5L91,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">basic object</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,604,501)" ed:width="42" ed:layout="rightmap" ed:height="24.5" id="257" ed:parentid="255">
+        <path d="M0,24.5L42,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">pod</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,604,532)" ed:width="60" ed:layout="rightmap" ed:height="24.5" id="259" ed:parentid="255">
+        <path d="M0,24.5L60,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">service</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,604,563)" ed:width="63" ed:layout="rightmap" ed:height="24.5" id="261" ed:parentid="255">
+        <path d="M0,24.5L63,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">volume</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,604,594)" ed:width="87" ed:layout="rightmap" ed:height="24.5" id="263" ed:parentid="255">
+        <path d="M0,24.5L87,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">namespace</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,486,687)" ed:width="90" ed:layout="rightmap" ed:height="24.5" id="265" ed:parentid="253">
+        <path d="M0,24.5L90,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">higher-level</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,603,625)" ed:width="81" ed:layout="rightmap" ed:height="24.5" id="267" ed:parentid="265">
+        <path d="M0,24.5L81,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">ReplicaSet</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,603,656)" ed:width="93" ed:layout="rightmap" ed:height="24.5" id="269" ed:parentid="265">
+        <path d="M0,24.5L93,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">Deployment</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,603,687)" ed:width="86" ed:layout="rightmap" ed:height="24.5" id="271" ed:parentid="265">
+        <path d="M0,24.5L86,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">StatefulSet</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,603,718)" ed:width="88" ed:layout="rightmap" ed:height="24.5" id="273" ed:parentid="265">
+        <path d="M0,24.5L88,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">Daemonset</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,603,749)" ed:width="39" ed:layout="rightmap" ed:height="24.5" id="275" ed:parentid="265">
+        <path d="M0,24.5L39,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">Job</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,331,795)" ed:width="171" ed:layout="rightmap" ed:height="24.5" id="277" ed:parentid="241">
+        <path d="M0,24.5L171,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kubernetes control plane</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,529,780)" ed:width="132" ed:layout="rightmap" ed:height="24.5" id="279" ed:parentid="277">
+        <path d="M0,24.5L132,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kubernetes master</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,529,811)" ed:width="121" ed:layout="rightmap" ed:height="24.5" id="281" ed:parentid="277">
+        <path d="M0,24.5L121,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">kubernetes node</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,688,780)" ed:width="278" ed:layout="rightmap" ed:height="24.5" id="283" ed:parentid="279">
+        <path d="M0,24.5L278,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">维护集群所需状态。管理集群状态的进程集合</tspan>
+        </text>
+    </g>
+    <g transform="matrix(1,0,0,1,677,811)" ed:width="135" ed:layout="rightmap" ed:height="24.5" id="285" ed:parentid="281">
+        <path d="M0,24.5L135,24.5" stroke-linejoin="round" stroke="#696969" fill="none"/>
+        <text class="st2">
+            <tspan style="white-space:pre" y="16.1" x="8">主节点控制每个节点</tspan>
+        </text>
+    </g>
+    <symbol id="plus">
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6z" fill="url(#lg1)"/>
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6zM3,6L9,6M6,3L6,9" stroke-width="0.7" fill="none" stroke="#46a000"/>
+    </symbol>
+    <symbol id="minus">
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6z" fill="url(#lg1)"/>
+        <path d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6zM3,6L9,6" stroke-width="0.7" fill="none" stroke="#46a000"/>
+    </symbol>
+    <g transform="translate(171,854)" ed:togtopicid="101">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(382,151)" ed:togtopicid="102">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(453,105)" ed:togtopicid="106">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(550,89)" ed:togtopicid="110">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(660,89)" ed:togtopicid="112">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(563,120)" ed:togtopicid="116">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(550,151)" ed:togtopicid="120">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(453,229)" ed:togtopicid="124">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(311,167)" ed:togtopicid="147">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(402,1107)" ed:togtopicid="149">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(501,921)" ed:togtopicid="151">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(474,967)" ed:togtopicid="157">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(568,1014)" ed:togtopicid="161">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(641,1122)" ed:togtopicid="165">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(725,1138)" ed:togtopicid="171">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(606,1277)" ed:togtopicid="183">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(690,1293)" ed:togtopicid="185">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(305,1277)" ed:togtopicid="195">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(402,1525)" ed:togtopicid="197">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(492,1386)" ed:togtopicid="201">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(545,1448)" ed:togtopicid="203">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(639,1510)" ed:togtopicid="205">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(551,1618)" ed:togtopicid="221">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(618,1556)" ed:togtopicid="223">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(887,1634)" ed:togtopicid="227">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(806,1680)" ed:togtopicid="229">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(305,590)" ed:togtopicid="241">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(376,420)" ed:togtopicid="251">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(460,631)" ed:togtopicid="253">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(578,553)" ed:togtopicid="255">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(577,693)" ed:togtopicid="265">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(503,801)" ed:togtopicid="277">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(662,786)" ed:togtopicid="279">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(651,817)" ed:togtopicid="281">
+        <use xlink:href="#minus"/>
+    </g>
+</svg>
+</div>
+        <div id="copyright">Created With  <a href="https://www.edrawsoft.com/" target="_blank" title="edrawsoft">MindMaster</a></div>
+      </div>
+    </div>
+    <script>eval(atob('dmFyIG11YT13aW5kb3cubmF2aWdhdG9yLnVzZXJBZ2VudDsNCnZhciB1YT0obXVhLmluZGV4T2YoJ3J2OjExJykrbXVhLmluZGV4T2YoJ01TSUUnKSk+PTA7DQpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc3ZnLWNvbnRhaW5lcicpLm9uY29udGV4dG1lbnUgPSBmdW5jdGlvbiAoZXZlbnQpIHsNCiAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpOw0KfQ0KZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3N2Zy1jb250YWluZXInKS5vbm1vdXNlZG93biA9IGZ1bmN0aW9uIChldmVudCkgew0KICAgIGlmKGV2ZW50LndoaWNoID09Myl7DQogICAgICAgIHRoaXMuc3R5bGUuY3Vyc29yID0gJ3BvaW50ZXInOw0KICAgICAgICB0aGlzLm9ubW91c2Vtb3ZlID0gZnVuY3Rpb24gKGV2KSB7DQogICAgICAgICAgICB0aGlzLnNjcm9sbEJ5KC0oZXYubW92ZW1lbnRYKSwgMCk7DQogICAgICAgICAgICB3aW5kb3cuc2Nyb2xsQnkoMCwtKGV2Lm1vdmVtZW50WSkpDQogICAgICAgIH0NCiAgICAgICAgdGhpcy5vbm1vdXNldXAgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmN1cnNvciA9ICBudWxsOw0KICAgICAgICAgICAgdGhpcy5vbm1vdXNldXAgPSBudWxsOw0KICAgICAgICAgICAgdGhpcy5vbm1vdXNlbW92ZSA9IG51bGw7DQogICAgICAgIH0NCiAgICB9DQp9DQpOdW1iZXIucHJvdG90eXBlLnRvc3VpdHN2Zz1mdW5jdGlvbiAoKSB7DQogICAgdmFyIG51bT10aGlzLnZhbHVlT2YoKTsNCiAgICBpZihudW0lMT09PTApew0KICAgICAgICByZXR1cm4gbnVtKzAuNQ0KICAgIH1lbHNlIHJldHVybiBudW07DQp9Ow0KTnVtYmVyLnByb3RvdHlwZS5wbHVzej1mdW5jdGlvbigpIHsNCiAgICB2YXIgbnVtPXRoaXMudmFsdWVPZigpOw0KICAgIHJldHVybiBudW08MTA/JzAnK251bTpudW07DQp9Ow0KZnVuY3Rpb24gcGFyc2VEYXRlKG51bSkgew0KICAgIHZhciBkYXRlID0gbmV3IERhdGUobnVtKTsNCiAgICB2YXIgWSA9IGRhdGUuZ2V0RnVsbFllYXIoKSArICctJzsNCiAgICB2YXIgTSA9IChkYXRlLmdldE1vbnRoKCkrMSkucGx1c3ooKSArICctJzsNCiAgICB2YXIgRCA9IGRhdGUuZ2V0RGF0ZSgpLnBsdXN6KCkgKyAnICc7DQogICAgdmFyIGggPSBkYXRlLmdldEhvdXJzKCkucGx1c3ooKSArICc6JzsNCiAgICB2YXIgbW0gPSBkYXRlLmdldE1pbnV0ZXMoKS5wbHVzeigpICsgJzonOw0KICAgIHZhciBzID0gZGF0ZS5nZXRTZWNvbmRzKCkucGx1c3ooKTsNCiAgICByZXR1cm4gWStNK0QraCttbStzOw0KfQ0KLy8tLXByZWRlZmluZWQNCi8vY29tbWVudC0tDQp2YXIgY29tbWVudHM9ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnZz5nW2VkXFw6Y29tbWVudF0nKTsNCmZ1bmN0aW9uIGdldGN3aChwb3B1cCkgew0KICAgIGRvY3VtZW50LmJvZHkuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3N2ZycpWzBdLmFwcGVuZENoaWxkKHBvcHVwKTsNCiAgICB2YXIgdz1wb3B1cC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKS53aWR0aDsNCiAgICB2YXIgaD1wb3B1cC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKS5oZWlnaHQ7DQogICAgcmV0dXJuIFt3LGhdDQp9DQpmb3IodmFyIGk9MDtpPGNvbW1lbnRzLmxlbmd0aDtpKyspew0KICAgIHZhciBwb3B1cD1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywnZycpOw0KICAgIHZhciBwb3B1cFI9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgdmFyIGhvdmVyPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgdmFyIG9saW5lPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCdmaWxsJywnI2NkY2RmZicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgneCcsJzAnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3knLCcwJyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCdoZWlnaHQnLCcxNicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCcxNicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbC1vcGFjaXR5JywnMC42Jyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nLGNvbW1lbnRzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykpOw0KICAgIGhvdmVyLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIGNvbW1lbnRzW2ldLmFwcGVuZENoaWxkKGhvdmVyKTsNCiAgICB2YXIgYT1KU09OLnBhcnNlKGNvbW1lbnRzW2ldLmdldEF0dHJpYnV0ZSgnZWQ6Y29tbWVudCcpKTsNCiAgICB2YXIgaGVpZ2h0PTA7DQogICAgdmFyIGNhcnI9W107DQogICAgZm9yKHZhciBqPTA7ajxhLmxlbmd0aDtqKyspew0KICAgICAgICB2YXIgc3RhbXA9TnVtYmVyKGFbal0uRGF0ZSkqMTAwMDsNCiAgICAgICAgdmFyIHRpbWU9cGFyc2VEYXRlKHN0YW1wKTsNCiAgICAgICAgdmFyIG5hbWU9YVtqXS5OYW1lOw0KICAgICAgICB2YXIgbWVzc2FnZT1hW2pdLk1lc3NhZ2U7DQogICAgICAgIHZhciBtZXNzYWdlQXJyPW1lc3NhZ2Uuc3BsaXQoL1xuLyk7DQogICAgICAgIHZhciBvPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdnJyk7DQogICAgICAgIHZhciBuPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIHZhciB0PWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIHZhciBtPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIG4uc2V0QXR0cmlidXRlKCd4Jyw1KTsNCiAgICAgICAgbi5zZXRBdHRyaWJ1dGUoJ3knLDEyKTsNCiAgICAgICAgbi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCcjMDA2ZWZmJyk7DQogICAgICAgIG4udGV4dENvbnRlbnQ9bmFtZSsnOiAnOw0KICAgICAgICBuLnNldEF0dHJpYnV0ZSgnZm9udC1zaXplJywnMTInKTsNCiAgICAgICAgdC5zZXRBdHRyaWJ1dGUoJ3gnLDIwMCk7DQogICAgICAgIHQuc2V0QXR0cmlidXRlKCd5JywxMik7DQogICAgICAgIHQuc2V0QXR0cmlidXRlKCdmaWxsJywnIzk2OTY5NicpOw0KICAgICAgICB0LnRleHRDb250ZW50PXRpbWU7DQogICAgICAgIHQuc2V0QXR0cmlidXRlKCdmb250LXNpemUnLCcxMCcpOw0KICAgICAgICBtLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywndHJhbnNsYXRlKDIwLDI3KScpOw0KICAgICAgICBtLnNldEF0dHJpYnV0ZSgnZm9udC1zaXplJywnMTInKTsNCiAgICAgICAgZm9yKHZhciBrPTA7azxtZXNzYWdlQXJyLmxlbmd0aDtrKyspew0KICAgICAgICAgICAgdmFyIHRzPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0c3BhbicpOw0KICAgICAgICAgICAgdHMuc2V0QXR0cmlidXRlKCd4JywnMCcpOw0KICAgICAgICAgICAgdHMuc2V0QXR0cmlidXRlKCd5JyxrKjE2KTsNCiAgICAgICAgICAgIHRzLnRleHRDb250ZW50PW1lc3NhZ2VBcnJba107DQogICAgICAgICAgICBtLmFwcGVuZENoaWxkKHRzKTsNCiAgICAgICAgfQ0KICAgICAgICBvLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywndHJhbnNsYXRlKDAsJytoZWlnaHQrJyknKTsNCiAgICAgICAgby5hcHBlbmRDaGlsZChuKTsNCiAgICAgICAgby5hcHBlbmRDaGlsZCh0KTsNCiAgICAgICAgby5hcHBlbmRDaGlsZChtKTsNCiAgICAgICAgY2Fyci5wdXNoKG8pOw0KICAgICAgICBwb3B1cC5hcHBlbmRDaGlsZChvKTsNCiAgICAgICAgaGVpZ2h0PShtZXNzYWdlQXJyLmxlbmd0aCsxKSoxNitoZWlnaHQ7DQogICAgfQ0KICAgIHZhciB3YXJyPWdldGN3aChwb3B1cCk7DQogICAgb2xpbmUuc2V0QXR0cmlidXRlKCd4JywnMCcpOw0KICAgIG9saW5lLnNldEF0dHJpYnV0ZSgneScsJzAnKTsNCiAgICB2YXIgb3c9d2FyclswXSsxMC41Ow0KICAgIHZhciBvaD13YXJyWzFdKzM7DQogICAgb2xpbmUuc2V0QXR0cmlidXRlKCd3aWR0aCcsb3cpOw0KICAgIG9saW5lLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JyxvaCk7DQogICAgb2xpbmUuc2V0QXR0cmlidXRlKCdmaWxsJywnd2hpdGUnKTsNCiAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ3N0cm9rZScsJyM2NTY1NjUnKTsNCiAgICBwb3B1cC5hcHBlbmRDaGlsZChvbGluZSk7DQogICAgdmFyIGw9Y2Fyci5sZW5ndGg7DQogICAgd2hpbGUobC0tKXsNCiAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQoY2FycltsXSk7DQogICAgfQ0KICAgIHBvcHVwLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdibG9jayc7DQogICAgfTsNCiAgICBwb3B1cC5vbm1vdXNlb3V0PWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgIH07DQogICAgdmFyIGNzPWNvbW1lbnRzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICB2YXIgcHM9Y29tbWVudHNbaV0ucGFyZW50Tm9kZS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpOw0KICAgIGlmKHBzLnN1YnN0cigwLDIpID09ICd0cicpew0KICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgdmFyIHg9cGFyc2VGbG9hdChjc1swXSkrcGFyc2VGbG9hdChwcHNbMF0pOw0KICAgICAgICB2YXIgeT1wYXJzZUZsb2F0KHBwc1sxXSk7DQogICAgICAgIHg9eC50b3N1aXRzdmcoKTsNCiAgICAgICAgeT15LnRvc3VpdHN2ZygpOw0KICAgICAgICB2YXIgdHJzdHIgPSAndHJhbnNsYXRlKCcreCsnLCcreSsnKSc7DQogICAgfQ0KICAgIGVsc2UgaWYocHMuc3Vic3RyKDAsMikgPT0gJ21hJyl7DQogICAgICAgIHZhciBwcHMgPSBwcy5tYXRjaCgvKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVtcLCBdKFwtP1xkKyhcLlxkKyk/KVwpJC8pOw0KICAgICAgICB2YXIgbWFBcnIgPSBbcGFyc2VGbG9hdChwcHNbMV0pLHBhcnNlRmxvYXQocHBzWzNdKSxwYXJzZUZsb2F0KHBwc1s1XSkscGFyc2VGbG9hdChwcHNbN10pLHBhcnNlRmxvYXQocHBzWzldKSxwYXJzZUZsb2F0KHBwc1sxMV0pXTsNCiAgICAgICAgaWYobWFBcnJbMV0gPT0gMCl7DQogICAgICAgICAgICB2YXIgeCA9IHBhcnNlRmxvYXQoY3NbMF0pOw0KICAgICAgICAgICAgdmFyIHk9IHBhcnNlRmxvYXQoY3NbMV0pKzE2Ow0KICAgICAgICAgICAgdmFyIHgxID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHgxPXgxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgeTE9eTEudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICB2YXIgdHJzdHIgPSAgJ3RyYW5zbGF0ZSgnK3gxKycsJyt5MSsnKSc7DQogICAgICAgIH1lbHNlew0KICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKSsxNjsNCiAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChjc1sxXSkrMTY7DQogICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgeCA9IHBhcnNlRmxvYXQoY3NbMF0pKzE2Ow0KICAgICAgICAgICAgeSA9IHBhcnNlRmxvYXQoY3NbMV0pOw0KICAgICAgICAgICAgdmFyIHgyID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTIgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHZhciBmeCA9IHgxPHgyP3gxLnRvc3VpdHN2ZygpOiB4Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciBmeSA9IHkxPnkyP3kxLnRvc3VpdHN2ZygpOiB5Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciBvZmZ5ID0gTWF0aC5hYnMoeTEteTIpOw0KICAgICAgICAgICAgdmFyIHRyc3RyID0gICd0cmFuc2xhdGUoJytmeCsnLCcrZnkrJyknOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JyxvZmZ5LnRvU3RyaW5nKCkpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCcxNicpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgneScsKC1vZmZ5KS50b1N0cmluZygpKTsNCiAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCd0cmFuc3BhcmVudCcpOw0KICAgICAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQocG9wdXBSKTsNCiAgICAgICAgfQ0KICAgIH0NCiAgICBwb3B1cC5zZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScsdHJzdHIpOw0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnY29tbWVudCcsJycpOw0KICAgIHBvcHVwLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnZWQ6Y29tbWVudGlkJyxjb21tZW50c1tpXS5wYXJlbnROb2RlLmlkKTsNCiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjc3ZnLWNvbnRhaW5lciA+IHN2ZycpLmFwcGVuZENoaWxkKHBvcHVwKTsNCiAgICBjb21tZW50c1tpXS5vbm1vdXNlb3Zlcj1mdW5jdGlvbiAoKSB7DQogICAgICAgIHZhciBjb21tZW50aWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5PSdibG9jayc7DQogICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDpjb21tZW50aWQ9JyIrY29tbWVudGlkKyInXVtjb21tZW50XSIpLnN0eWxlLmRpc3BsYXk9J2Jsb2NrJzsNCiAgICB9Ow0KICAgIGNvbW1lbnRzW2ldLm9ubW91c2VvdXQ9ZnVuY3Rpb24gKCkgew0KICAgICAgICB2YXIgY29tbWVudGlkPXRoaXMucGFyZW50Tm9kZS5pZDsNCi8vICAgICAgICB3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmVtb3ZlQWxsUmFuZ2VzKCk7DQogICAgICAgIHRoaXMucXVlcnlTZWxlY3RvcigncmVjdCcpLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6Y29tbWVudGlkPSciK2NvbW1lbnRpZCsiJ11bY29tbWVudF0iKS5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICB9DQp9DQovLy0tY29tbWVudA0KLy9ub3RlLS0NCmlmKCF1YSl7DQogICAgdmFyIG5vdGVzPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2c+Z1tlZFxcOm5vdGVdJyk7DQogICAgZnVuY3Rpb24gZ2V0d2gocyxwKSB7DQogICAgICAgIHZhciBtYWlucD1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsNCiAgICAgICAgbWFpbnAuc3R5bGUuY3NzVGV4dD1zOw0KICAgICAgICBtYWlucC5zdHlsZS5kaXNwbGF5PSdpbmxpbmUtYmxvY2snOw0KCQltYWlucC5zdHlsZS5tYXhXaWR0aCA9ICc0MDBweCc7DQoJCW1haW5wLnN0eWxlLndvcmRCcmVhayA9ICdicmVhay1hbGwnOw0KICAgICAgICBtYWlucC5pbm5lckhUTUw9cDsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChtYWlucCk7DQogICAgICAgIHZhciB3PW1haW5wLmNsaWVudFdpZHRoOw0KICAgICAgICB2YXIgaD1tYWlucC5jbGllbnRIZWlnaHQ7DQogICAgICAgIGRvY3VtZW50LmJvZHkucmVtb3ZlQ2hpbGQobWFpbnApOw0KICAgICAgICByZXR1cm4gW3csaF0NCiAgICB9DQogICAgZm9yKHZhciBpPTA7aTxub3Rlcy5sZW5ndGg7aSsrKXsNCiAgICAgICAgdmFyIGE9bm90ZXNbaV0uZ2V0QXR0cmlidXRlKCdlZDpub3RlJyk7DQoJCXZhciBub3RlTG9jayA9IG5vdGVzW2ldLmdldEF0dHJpYnV0ZSgnZWQ6bm90ZWxvY2snKTsNCiAgICAgICAgaWYobm90ZUxvY2sgPT0gJ3RydWUnKXsNCiAgICAgICAgICAgIGNvbnRpbnVlOw0KICAgICAgICB9DQogICAgICAgIHZhciBtYWlucD1hLm1hdGNoKC88Ym9keVtePl0qPiguKik8XC9ib2R5Pi8pWzFdOw0KICAgICAgICB2YXIgbWFpbnM9YS5tYXRjaCgvc3R5bGU9IiguKj8pIi8pWzFdOw0KICAgICAgICB2YXIgb3V0PWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdnJyk7DQogICAgICAgIHZhciBvbGluZT1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywncmVjdCcpOw0KICAgICAgICB2YXIgcG9wdXA9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsJ2ZvcmVpZ25PYmplY3QnKTsNCiAgICAgICAgdmFyIHBvcHVwUj0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsJ3JlY3QnKTsNCiAgICAgICAgdmFyIGhvdmVyPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbCcsJyNjZGNkZmYnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd4JywnMCcpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3knLCcwJyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JywnMTYnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd3aWR0aCcsJzE2Jyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbC1vcGFjaXR5JywnMC42Jyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyxub3Rlc1tpXS5xdWVyeVNlbGVjdG9yKCd1c2UnKS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpKTsNCiAgICAgICAgaG92ZXIuc3R5bGUuZGlzcGxheT0nbm9uZSc7DQogICAgICAgIG5vdGVzW2ldLmFwcGVuZENoaWxkKGhvdmVyKTsNCiAgICAgICAgcG9wdXAuc3R5bGUuY3NzVGV4dD1tYWluczsNCiAgICAgICAgcG9wdXAuaW5uZXJIVE1MPW1haW5wOw0KICAgICAgICB2YXIgd2g9Z2V0d2gobWFpbnMsbWFpbnApOw0KICAgICAgICBwb3B1cC5zZXRBdHRyaWJ1dGUoJ3dpZHRoJyx3aFswXSk7DQogICAgICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnaGVpZ2h0Jyx3aFsxXSk7DQogICAgICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywndHJhbnNsYXRlKDgsNCknKTsNCgkJcG9wdXAuc3R5bGUud29yZEJyZWFrID0gJ2JyZWFrLWFsbCc7DQogICAgICAgIHBvcHVwLnN0eWxlLnRleHRBbGlnbj0nbGVmdCc7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgneCcsJzAnKTsNCiAgICAgICAgb2xpbmUuc2V0QXR0cmlidXRlKCd5JywnMCcpOw0KICAgICAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ3dpZHRoJyx3aFswXSsxNik7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgnaGVpZ2h0Jyx3aFsxXSs4KTsNCiAgICAgICAgb2xpbmUuc2V0QXR0cmlidXRlKCdzdHJva2UnLCcjYTI3YTAwJyk7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgnZmlsbCcsJyNmZmU3OWQnKTsNCiAgICAgICAgb3V0LmFwcGVuZENoaWxkKG9saW5lKTsNCiAgICAgICAgb3V0LmFwcGVuZENoaWxkKHBvcHVwKTsNCiAgICAgICAgb3V0LnNldEF0dHJpYnV0ZSgnbm90ZScsJycpOw0KICAgICAgICBvdXQuc3R5bGUuZGlzcGxheT0nbm9uZSc7DQogICAgICAgIG91dC5zZXRBdHRyaWJ1dGUoJ2VkOm5vdGVpZCcsbm90ZXNbaV0ucGFyZW50Tm9kZS5pZCk7DQogICAgICAgIG91dC5vbm1vdXNlb3Zlcj1mdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmRpc3BsYXk9J2Jsb2NrJzsNCiAgICAgICAgfTsNCiAgICAgICAgb3V0Lm9ubW91c2VvdXQ9ZnVuY3Rpb24gKCkgew0KLy8gICAgICAgIHdpbmRvdy5nZXRTZWxlY3Rpb24gPyB3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmVtb3ZlUmFuZ2Uod2luZG93LmdldFNlbGVjdGlvbigpLnJlKTpkb2N1bWVudC5zZWxlY3Rpb24uZW1wdHkoKTsNCg0KICAgICAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICAgICAgfTsNCiAgICAgICAgdmFyIGNzPW5vdGVzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgdmFyIHBzPW5vdGVzW2ldLnBhcmVudE5vZGUuZ2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nKTsNCiAgICAgICAgaWYocHMuc3Vic3RyKDAsMikgPT0gJ3RyJyl7DQogICAgICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgICAgIHZhciB4PXBhcnNlRmxvYXQoY3NbMF0pK3BhcnNlRmxvYXQocHBzWzBdKTsNCiAgICAgICAgICAgIHZhciB5PXBhcnNlRmxvYXQocHBzWzFdKTsNCiAgICAgICAgICAgIHg9eC50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHk9eS50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciB0cnN0ciA9ICd0cmFuc2xhdGUoJyt4KycsJyt5KycpJzsNCiAgICAgICAgfWVsc2UgaWYocHMuc3Vic3RyKDAsMikgPT0gJ21hJyl7DQogICAgICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goLyhcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylcKSQvKTsNCiAgICAgICAgICAgIHZhciBtYUFyciA9IFtwYXJzZUZsb2F0KHBwc1sxXSkscGFyc2VGbG9hdChwcHNbM10pLHBhcnNlRmxvYXQocHBzWzVdKSxwYXJzZUZsb2F0KHBwc1s3XSkscGFyc2VGbG9hdChwcHNbOV0pLHBhcnNlRmxvYXQocHBzWzExXSldOw0KICAgICAgICAgICAgaWYobWFBcnJbMV0gPT0gMCl7DQogICAgICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKTsNCiAgICAgICAgICAgICAgICB2YXIgeSA9IHBhcnNlRmxvYXQoY3NbMV0pKzE2Ow0KICAgICAgICAgICAgICAgIHZhciB4MSA9IHggKiBtYUFyclswXSArIHkgKiBtYUFyclsyXSArIG1hQXJyWzRdOw0KICAgICAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgICAgIHgxPXgxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgICAgIHkxPXkxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgICAgIHZhciB0cnN0ciA9ICAndHJhbnNsYXRlKCcreDErJywnK3kxKycpJzsNCiAgICAgICAgICAgIH1lbHNlew0KICAgICAgICAgICAgICAgIHZhciB4ID0gcGFyc2VGbG9hdChjc1swXSkrMTY7DQogICAgICAgICAgICAgICAgdmFyIHkgPSBwYXJzZUZsb2F0KGNzWzFdKSsxNjsNCiAgICAgICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgICAgICB4ID0gcGFyc2VGbG9hdChjc1swXSkrMTY7DQogICAgICAgICAgICAgICAgeSA9IHBhcnNlRmxvYXQoY3NbMV0pOw0KICAgICAgICAgICAgICAgIHZhciB4MiA9IHggKiBtYUFyclswXSArIHkgKiBtYUFyclsyXSArIG1hQXJyWzRdOw0KICAgICAgICAgICAgICAgIHZhciB5MiA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgICAgIHZhciBmeCA9IHgxPHgyP3gxLnRvc3VpdHN2ZygpOiB4Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICB2YXIgZnkgPSB5MT55Mj95MS50b3N1aXRzdmcoKTogeTIudG9zdWl0c3ZnKCk7DQoJCQkJdmFyIG9mZnkgPSBNYXRoLmFicyh5MS15Mik7CQkJCQkJCQkJCSAgDQogICAgICAgICAgICAgICAgdmFyIHRyc3RyID0gICd0cmFuc2xhdGUoJytmeCsnLCcrZnkrJyknOw0KICAgICAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsb2ZmeS50b1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICBwb3B1cFIuc2V0QXR0cmlidXRlKCd3aWR0aCcsJzE2Jyk7DQogICAgICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgneScsKC1vZmZ5KS50b1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICBwb3B1cFIuc2V0QXR0cmlidXRlKCdmaWxsJywndHJhbnNwYXJlbnQnKTsNCiAgICAgICAgICAgICAgICBwb3B1cC5hcHBlbmRDaGlsZChwb3B1cFIpOw0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgICAgIG91dC5zZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScsdHJzdHIpOw0KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjc3ZnLWNvbnRhaW5lciA+IHN2ZycpLmFwcGVuZENoaWxkKG91dCk7DQogICAgICAgIG5vdGVzW2ldLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIHZhciBub3RlaWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KICAgICAgICAgICAgdGhpcy5xdWVyeVNlbGVjdG9yKCdyZWN0Jykuc3R5bGUuZGlzcGxheT0nYmxvY2snOw0KICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOm5vdGVpZD0nIitub3RlaWQrIiddW25vdGVdIikuc3R5bGUuZGlzcGxheT0nYmxvY2snOw0KICAgICAgICB9Ow0KICAgICAgICBub3Rlc1tpXS5vbm1vdXNlb3V0PWZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIHZhciBub3RlaWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KLy8gICAgICAgIHdpbmRvdy5nZXRTZWxlY3Rpb24oKS5yZW1vdmVBbGxSYW5nZXMoKTsNCiAgICAgICAgICAgIHRoaXMucXVlcnlTZWxlY3RvcigncmVjdCcpLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOm5vdGVpZD0nIitub3RlaWQrIiddW25vdGVdIikuc3R5bGUuZGlzcGxheT0nbm9uZSc7DQogICAgICAgIH0NCiAgICB9DQp9ZWxzZXsNCiAgICBjb25zb2xlLmxvZygn5oqx5q2J77yMSUXmtY/op4jlmajkuI3mlK/mjIFub3Rl6Kej5p6Q77yM6K+35L2/55So5YW25LuW5YaF5qC45rWP6KeI5Zmo44CC6LCi6LCi77yBJykNCn0NCi8vLS1ub3RlDQovL2h5cGVybGluay0tDQp2YXIgbGlua3M9ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnZz5nW2VkXFw6aHlwZXJsaW5rXScpOw0KZnVuY3Rpb24gZ2V0bWF4bGVuKGFycixicnIpIHsNCiAgICB2YXIgbD0wOw0KICAgIHZhciBsbD0wOw0KICAgIGZvcih2YXIgaj0wO2o8YXJyLmxlbmd0aDtqKyspew0KICAgICAgICB2YXIgZT1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywndGV4dCcpOw0KICAgICAgICBpZighaXNOYU4obGlua2FycltqXSkpew0KICAgICAgICAgICAgZS50ZXh0Q29udGVudD0nUGFnZS0nK2FycltqXTsNCiAgICAgICAgfWVsc2V7DQogICAgICAgICAgICBlLnRleHRDb250ZW50PWFycltqXTsNCiAgICAgICAgfQ0KICAgICAgICBlLnN0eWxlLmZvbnRTaXplPScxMnB4JzsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0uYXBwZW5kQ2hpbGQoZSk7DQogICAgICAgIHZhciBldz1lLmdldEJCb3goKS53aWR0aDsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0ucmVtb3ZlQ2hpbGQoZSk7DQogICAgICAgIHZhciBoPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIGgudGV4dENvbnRlbnQ9YnJyW2pdOw0KICAgICAgICBoLnN0eWxlLmZvbnRTaXplPScxMnB4JzsNCiAgICAgICAgaC5zdHlsZS5mb250V2VpZ2h0PSdib2xkJzsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0uYXBwZW5kQ2hpbGQoaCk7DQogICAgICAgIHZhciBodz1oLmdldEJCb3goKS53aWR0aDsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0ucmVtb3ZlQ2hpbGQoaCk7DQogICAgICAgIGw9ZXc+aHc/ZXc6aHc7DQogICAgICAgIGxsPWw+bGw/bDpsbDsNCiAgICB9DQogICAgcmV0dXJuIGxsOw0KfQ0KZm9yKHZhciBpPTA7aTxsaW5rcy5sZW5ndGg7aSsrKXsNCiAgICB2YXIgcG9wdXA9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsJ2cnKTsNCiAgICB2YXIgcG9wdXBSPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywncmVjdCcpOw0KICAgIHZhciBob3Zlcj1kb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywncmVjdCcpOw0KICAgIHZhciBkZXNjYXJyPVtdOw0KICAgIHZhciBsaW5rYXJyPVtdOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbCcsJyNjZGNkZmYnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3gnLCcwJyk7DQogICAgaG92ZXIuc2V0QXR0cmlidXRlKCd5JywnMCcpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JywnMTYnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3dpZHRoJywnMTYnKTsNCiAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ2ZpbGwtb3BhY2l0eScsJzAuNicpOw0KICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyxsaW5rc1tpXS5xdWVyeVNlbGVjdG9yKCd1c2UnKS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpKTsNCiAgICBob3Zlci5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICBsaW5rc1tpXS5hcHBlbmRDaGlsZChob3Zlcik7DQogICAgLy8gY29uc29sZS5sb2cobGlua3NbaV0uZ2V0QXR0cmlidXRlKCdlZDpoeXBlcmxpbmsnKSk7DQogICAgdmFyIGE9SlNPTi5wYXJzZShsaW5rc1tpXS5nZXRBdHRyaWJ1dGUoJ2VkOmh5cGVybGluaycpKTsNCiAgICB2YXIgY3M9bGlua3NbaV0ucXVlcnlTZWxlY3RvcigndXNlJykuZ2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nKS5tYXRjaCgvXCgoXFMqfFxTKlxzXFMqKVwpLylbMV0uc3BsaXQoLyB8LC8pOw0KICAgIHZhciBwcz1saW5rc1tpXS5wYXJlbnROb2RlLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyk7DQogICAgaWYocHMuc3Vic3RyKDAsMikgPT0gJ3RyJyl7DQogICAgICAgIHZhciBwcHMgPSBwcy5tYXRjaCgvXCgoXFMqfFxTKlxzXFMqKVwpLylbMV0uc3BsaXQoLyB8LC8pOw0KICAgICAgICB2YXIgeD1wYXJzZUZsb2F0KGNzWzBdKStwYXJzZUZsb2F0KHBwc1swXSk7DQogICAgICAgIHZhciB5PXBhcnNlRmxvYXQocHBzWzFdKTsNCiAgICAgICAgeD14LnRvc3VpdHN2ZygpOw0KICAgICAgICB5PXkudG9zdWl0c3ZnKCk7DQogICAgICAgIHZhciB0cnN0ciA9ICd0cmFuc2xhdGUoJyt4KycsJyt5KycpJzsNCiAgICB9ZWxzZSBpZihwcy5zdWJzdHIoMCwyKSA9PSAnbWEnKXsNCiAgICAgICAgdmFyIHBwcyA9IHBzLm1hdGNoKC8oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pXCkkLyk7DQogICAgICAgIHZhciBtYUFyciA9IFtwYXJzZUZsb2F0KHBwc1sxXSkscGFyc2VGbG9hdChwcHNbM10pLHBhcnNlRmxvYXQocHBzWzVdKSxwYXJzZUZsb2F0KHBwc1s3XSkscGFyc2VGbG9hdChwcHNbOV0pLHBhcnNlRmxvYXQocHBzWzExXSldOw0KICAgICAgICBpZihtYUFyclsxXSA9PSAwKXsNCiAgICAgICAgICAgIHZhciB4ID0gcGFyc2VGbG9hdChjc1swXSk7DQogICAgICAgICAgICB2YXIgeSA9IHBhcnNlRmxvYXQoY3NbMV0pKzE2Ow0KICAgICAgICAgICAgdmFyIHgxID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHgxPXgxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgeTE9eTEudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICB2YXIgdHJzdHIgPSAgJ3RyYW5zbGF0ZSgnK3gxKycsJyt5MSsnKSc7DQogICAgICAgIH1lbHNlew0KICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKSsxNjsNCiAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChjc1sxXSkrMTY7DQogICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgeCA9IHBhcnNlRmxvYXQoY3NbMF0pKzE2Ow0KICAgICAgICAgICAgeSA9IHBhcnNlRmxvYXQoY3NbMV0pOw0KICAgICAgICAgICAgdmFyIHgyID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICB2YXIgeTIgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgIHZhciBmeCA9IHgxPHgyP3gxLnRvc3VpdHN2ZygpOiB4Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciBmeSA9IHkxPnkyP3kxLnRvc3VpdHN2ZygpOiB5Mi50b3N1aXRzdmcoKTsNCgkJCXZhciBvZmZ5ID0gTWF0aC5hYnMoeTEteTIpOwkJCQkJCQkJCQkgIA0KICAgICAgICAgICAgdmFyIHRyc3RyID0gICd0cmFuc2xhdGUoJytmeCsnLCcrZnkrJyknOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JyxvZmZ5LnRvU3RyaW5nKCkpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCcxNicpOw0KICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgneScsKC1vZmZ5KS50b1N0cmluZygpKTsNCiAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCd0cmFuc3BhcmVudCcpOw0KICAgICAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQocG9wdXBSKTsNCiAgICAgICAgfQ0KICAgIH0NCiAgICB2YXIgYWw9YS5sZW5ndGg7DQogICAgZm9yKHZhciBqPTA7ajxhbDtqKyspew0KICAgICAgICBsaW5rYXJyLnB1c2goYVtqXS5saW5rKTsNCiAgICAgICAgZGVzY2Fyci5wdXNoKGFbal0uZGVzYyk7DQogICAgfQ0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJyx0cnN0cik7DQogICAgdmFyIG1heD1nZXRtYXhsZW4obGlua2FycixkZXNjYXJyKTsNCiAgICBmb3IodmFyIGs9MDtrPGFsO2srKyl7DQogICAgICAgIHZhciBjPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdhJyk7DQogICAgICAgIHZhciBkPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCdyZWN0Jyk7DQogICAgICAgIHZhciBlPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIHZhciBmPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCd0ZXh0Jyk7DQogICAgICAgIGlmKGlzTmFOKGxpbmthcnJba10pKXsNCiAgICAgICAgICAgIGMuc2V0QXR0cmlidXRlTlMoImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiwgInhsaW5rIiwgImh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiKTsNCiAgICAgICAgICAgIGMuc2V0QXR0cmlidXRlTlMoImh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiLCAiaHJlZiIsIGxpbmthcnJba10pOw0KICAgICAgICAgICAgYy5zZXRBdHRyaWJ1dGUoJ3RhcmdldCcsJ19ibGFuaycpOw0KICAgICAgICAgICAgZS50ZXh0Q29udGVudD1saW5rYXJyW2tdOw0KICAgICAgICB9ZWxzZXsNCiAgICAgICAgICAgIGUudGV4dENvbnRlbnQ9J1BhZ2UtJytsaW5rYXJyW2tdOw0KICAgICAgICAgICAgYy5zZXRBdHRyaWJ1dGVOUygiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLCAieGxpbmsiLCAiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIpOw0KICAgICAgICAgICAgYy5zZXRBdHRyaWJ1dGVOUygiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIsICJocmVmIiwgIiMiK2xpbmthcnJba10pOw0KICAgICAgICB9DQogICAgICAgIGQuc2V0QXR0cmlidXRlKCd3aWR0aCcsbWF4KzEwKTsNCiAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsJzMzJyk7DQogICAgICAgIGQuc2V0QXR0cmlidXRlKCdzdHJva2UnLCcjOTk5OTk5Jyk7DQogICAgICAgIGQuc2V0QXR0cmlidXRlKCdmaWxsJywnd2hpdGUnKTsNCiAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ3knLDMzKmspOw0KICAgICAgICBmLnRleHRDb250ZW50PWRlc2NhcnJba107DQogICAgICAgIGYuc3R5bGUuZm9udFNpemU9JzEycHgnOw0KICAgICAgICBmLnN0eWxlLmZvbnRXZWlnaHQ9J2JvbGQnOw0KICAgICAgICBmLnNldEF0dHJpYnV0ZSgneCcsNSk7DQogICAgICAgIGYuc2V0QXR0cmlidXRlKCd5JywzMyprKzEyKTsNCiAgICAgICAgZS5zdHlsZS5mb250U2l6ZT0nMTJweCc7DQogICAgICAgIGUuc2V0QXR0cmlidXRlKCd5JywzMyprKzI4KTsNCiAgICAgICAgZS5zZXRBdHRyaWJ1dGUoJ3gnLDUpOw0KICAgICAgICBjLmFwcGVuZENoaWxkKGQpOw0KICAgICAgICBjLmFwcGVuZENoaWxkKGYpOw0KICAgICAgICBjLmFwcGVuZENoaWxkKGUpOw0KICAgICAgICBjLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIHRoaXMucXVlcnlTZWxlY3RvcigncmVjdCcpLnN0eWxlLmZpbGw9JyNlMWUxZmYnDQogICAgICAgIH07DQogICAgICAgIGMub25tb3VzZW91dD1mdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5maWxsPSd3aGl0ZScNCiAgICAgICAgfTsNCiAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQoYyk7DQogICAgfQ0KICAgIHBvcHVwLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnaHlwZXJsaW5rJywnJyk7DQogICAgcG9wdXAuc2V0QXR0cmlidXRlKCdlZDpsaW5raWQnLGxpbmtzW2ldLnBhcmVudE5vZGUuaWQpOw0KICAgIHBvcHVwLm9ubW91c2VvdmVyPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdibG9jayc7DQogICAgfTsNCiAgICBwb3B1cC5vbmNsaWNrPWZ1bmN0aW9uICgpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICB9Ow0KICAgIHBvcHVwLm9ubW91c2VvdXQ9ZnVuY3Rpb24gKCkgew0KICAgICAgICB0aGlzLnN0eWxlLmRpc3BsYXk9J25vbmUnOw0KICAgIH07DQogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3N2Zy1jb250YWluZXIgPiBzdmcnKS5hcHBlbmRDaGlsZChwb3B1cCk7DQogICAgbGlua3NbaV0ub25tb3VzZW92ZXI9ZnVuY3Rpb24gKCkgew0KICAgICAgICB2YXIgbGlua2lkPXRoaXMucGFyZW50Tm9kZS5pZDsNCiAgICAgICAgdGhpcy5xdWVyeVNlbGVjdG9yKCdyZWN0Jykuc3R5bGUuZGlzcGxheT0nYmxvY2snOw0KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6bGlua2lkPSciK2xpbmtpZCsiJ11baHlwZXJsaW5rXSIpLnN0eWxlLmRpc3BsYXk9J2Jsb2NrJzsNCiAgICB9DQogICAgbGlua3NbaV0ub25tb3VzZW91dD1mdW5jdGlvbiAoKSB7DQogICAgICAgIHZhciBsaW5raWQ9dGhpcy5wYXJlbnROb2RlLmlkOw0KICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOmxpbmtpZD0nIitsaW5raWQrIiddW2h5cGVybGlua10iKS5zdHlsZS5kaXNwbGF5PSdub25lJzsNCiAgICB9DQp9DQovLy0taHlwZXJsaW5rDQovL2luaXRpYWxpemUtLQ0KdmFyIHNoYXBlPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2dbZWRcXDp0b2d0b3BpY2lkXScpOw0KdmFyIG1JZD1kb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdnW2VkXFw6dG9waWN0eXBlXScpOw0KdmFyIGRhdGFUcmVlPXt9Ow0KdmFyIGV4dHJhUmVsYT17fTsNCnZhciBjaGVja0lEPScnOw0KZm9yKHZhciBpPTA7aTxtSWQubGVuZ3RoO2krKyl7DQogICAgdmFyIHR5cGU9bUlkW2ldLmdldEF0dHJpYnV0ZSgnZWQ6dG9waWN0eXBlJyk7DQogICAgdmFyIHNpZD1tSWRbaV0uaWQ7DQogICAgaWYodHlwZSE9PSdjYWxsb3V0Jyl7DQogICAgICAgIGluaXQoc2lkLGRhdGFUcmVlKQ0KICAgIH0NCn0NCmZ1bmN0aW9uIGluaXQoaWQsIG9iaikgew0KICAgIHZhciBjaGlsZHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJnW2VkXFw6cGFyZW50aWQ9JyIgKyBpZCArICInXTpub3QoW2VkXFw6dG9waWN0eXBlXSkiKTsNCiAgICB2YXIgY2FsbHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJnW2VkXFw6cGFyZW50aWQ9JyIgKyBpZCArICInXVtlZFxcOnRvcGljdHlwZV0iKTsNCiAgICB2YXIgc3VtbWFyeSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoInBhdGhbZWRcXDpwYXJlbnRpZCo9JyIgKyBpZCArICInXVtlZFxcOnR5cGU9J3N1bW1hcnknXSIpOw0KICAgIHZhciBib3VuZGFyeT0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgicGF0aFtlZFxcOnBhcmVudGlkKj0nIiArIGlkICsgIiddW2VkXFw6dHlwZT0nYm91bmRhcnknXSIpOw0KICAgIHZhciByZWxhZnJvbT1kb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJnW2VkXFw6ZnJvbWlkKj0nIiArIGlkICsgIiddW2VkXFw6dHlwZT0ncmVsYXRpb24nXSIpOw0KICAgIHZhciByZWxhdG89ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiZ1tlZFxcOnRvaWQqPSciICsgaWQgKyAiJ11bZWRcXDp0eXBlPSdyZWxhdGlvbiddIik7DQogICAgb2JqWyJtIiArIGlkXSA9IHt9Ow0KICAgIHZhciB0eXBlID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoaWQpLmdldEF0dHJpYnV0ZSgnZWQ6dG9waWN0eXBlJyk7DQogICAgdmFyIGl3PWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOndpZHRoJyk7DQogICAgdmFyIGloPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOmhlaWdodCcpOw0KICAgIGlmICh0eXBlKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0udHlwZSA9IHR5cGU7DQogICAgfQ0KICAgIGlmKGl3JiZpaCl7DQogICAgICAgIG9ialsibSIgKyBpZF0ud2lkdGggPWl3Ow0KICAgICAgICBvYmpbIm0iICsgaWRdLmhlaWdodCA9aWg7DQogICAgfQ0KICAgIGlmIChyZWxhZnJvbS5sZW5ndGggIT09IDApIHsNCiAgICAgICAgb2JqWyJtIiArIGlkXS5yZWxhZnJvbSA9IHt9Ow0KICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IHJlbGFmcm9tLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgaW5kZXhpZCA9IHJlbGFmcm9tW2ldLmlkOw0KICAgICAgICAgICAgdmFyIHRvaWQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpbmRleGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOnRvaWQnKTsNCiAgICAgICAgICAgIGlmIChleHRyYVJlbGFbaW5kZXhpZF0gPT09IHVuZGVmaW5lZCkgew0KICAgICAgICAgICAgICAgIGV4dHJhUmVsYVtpbmRleGlkXSA9IHsNCiAgICAgICAgICAgICAgICAgICAgaWQ6IGluZGV4aWQsDQogICAgICAgICAgICAgICAgICAgIGZyb21pZDogaWQsDQogICAgICAgICAgICAgICAgICAgIHRvaWQ6IHRvaWQsDQogICAgICAgICAgICAgICAgICAgIGlzQzogZmFsc2UNCiAgICAgICAgICAgICAgICB9Ow0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgb2JqWyJtIiArIGlkXS5yZWxhZnJvbVtpbmRleGlkXT17fTsNCiAgICAgICAgICAgIG9ialsibSIgKyBpZF0ucmVsYWZyb20uZGlzcGxheT1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnPydibG9jayc6J25vbmUnOw0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChyZWxhdG8ubGVuZ3RoICE9PSAwKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0ucmVsYXRvID0ge307DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgcmVsYXRvLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgaW5kZXhpZD1yZWxhdG9baV0uaWQ7DQogICAgICAgICAgICB2YXIgZnJvbWlkPWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGluZGV4aWQpLmdldEF0dHJpYnV0ZSgnZWQ6ZnJvbWlkJyk7DQogICAgICAgICAgICBpZihleHRyYVJlbGFbaW5kZXhpZF0gPT09IHVuZGVmaW5lZCl7DQogICAgICAgICAgICAgICAgZXh0cmFSZWxhW2luZGV4aWRdPXsNCiAgICAgICAgICAgICAgICAgICAgaWQ6aW5kZXhpZCwNCiAgICAgICAgICAgICAgICAgICAgZnJvbWlkOmZyb21pZCwNCiAgICAgICAgICAgICAgICAgICAgdG9pZDppZCwNCiAgICAgICAgICAgICAgICAgICAgaXNDOmZhbHNlDQogICAgICAgICAgICAgICAgfTsNCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIG9ialsibSIgKyBpZF0ucmVsYXRvW2luZGV4aWRdPXt9Ow0KICAgICAgICAgICAgb2JqWyJtIiArIGlkXS5yZWxhdG8uZGlzcGxheT1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnPydibG9jayc6J25vbmUnOw0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChjaGlsZHMubGVuZ3RoICE9PSAwKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0uY2hpbGQgPSB7fTsNCiAgICAgICAgaWYgKGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciICsgaWQgKyAiJ10iKSkgew0KICAgICAgICAgICAgLy8gY29uc29sZS5sb2coZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOnRvZ3RvcGljaWQ9JyIgKyBpZCArICInXSIpLmNoaWxkTm9kZXNbMF0uZ2V0QXR0cmlidXRlKCd4bGluazpocmVmJykpOw0KICAgICAgICAgICAgdmFyIHRvZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciICsgaWQgKyAiJ10iKS5nZXRFbGVtZW50c0J5VGFnTmFtZSgndXNlJylbMF0uZ2V0QXR0cmlidXRlKCd4bGluazpocmVmJykuc2xpY2UoMSk7DQogICAgICAgICAgICBvYmpbIm0iICsgaWRdLnRvZ3R5cGUgPSB0b2c7DQogICAgICAgIH0NCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjaGlsZHMubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBjaWQgPSBjaGlsZHNbaV0uaWQ7DQogICAgICAgICAgICBpbml0KGNpZCwgb2JqWyJtIiArIGlkXS5jaGlsZCk7DQogICAgICAgIH0NCiAgICB9DQogICAgaWYgKGNhbGxzLmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLmNhbGwgPSB7fTsNCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjYWxscy5sZW5ndGg7IGkrKykgew0KICAgICAgICAgICAgdmFyIGNpZCA9IGNhbGxzW2ldLmlkOw0KICAgICAgICAgICAgaW5pdChjaWQsIG9ialsibSIgKyBpZF0uY2FsbCk7DQogICAgICAgIH0NCiAgICB9DQogICAgaWYgKGJvdW5kYXJ5Lmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLmJvdW5kYXJ5ID0ge307DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgYm91bmRhcnkubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBjaWQgPWJvdW5kYXJ5W2ldLmlkOw0KICAgICAgICAgICAgaW5pdChjaWQsIG9ialsibSIgKyBpZF0uYm91bmRhcnkpOw0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChzdW1tYXJ5Lmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLnN1bW1hcnkgPSB7fTsNCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBzdW1tYXJ5Lmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgY2lkID0gc3VtbWFyeVtpXS5pZDsNCiAgICAgICAgICAgIGluaXQoY2lkLCBvYmpbIm0iICsgaWRdLnN1bW1hcnkpOw0KICAgICAgICB9DQogICAgfQ0KfQ0KLy8tLWluaXRpYWxpemUNCi8vdG9nZ2xlZGlzcGxheS0tDQp2YXIgY2hhaW5BcnI9W107DQpmdW5jdGlvbiBnZXRjaGFpbihpZCl7DQogICAgY2hhaW5BcnIudW5zaGlmdCgnbScraWQpOw0KICAgIHZhciBwYXJlbnQ9ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoaWQpLmdldEF0dHJpYnV0ZSgnZWQ6cGFyZW50aWQnKTsNCiAgICBpZighcGFyZW50KXsNCiAgICAgICAgcmV0dXJuOw0KICAgIH0NCglpZihwYXJlbnQubWF0Y2goL1wsLykpew0KICAgICAgICBwYXJlbnQgPSBwYXJlbnQubWF0Y2goL1xkKyg/PVwsKS8pWzBdDQogICAgfQ0KICAgIGdldGNoYWluKHBhcmVudCk7DQp9DQpmdW5jdGlvbiBnZXRvYmooaWQpIHsNCiAgICBjaGFpbkFycj1bXTsNCiAgICBnZXRjaGFpbihpZCk7DQogICAgdmFyIG1haW49Y2hhaW5BcnJbMF07DQogICAgaWYoY2hhaW5BcnIubGVuZ3RoPjEpew0KICAgICAgICB2YXIgb2JqPWRhdGFUcmVlW21haW5dOw0KICAgICAgICAvLyBjb25zb2xlLmxvZyhjaGFpbkFycik7DQogICAgICAgIGZvcih2YXIgaT0xO2k8Y2hhaW5BcnIubGVuZ3RoO2krKykgew0KICAgICAgICAgICAgdmFyIGEgPSBjaGFpbkFycltpXTsNCiAgICAgICAgICAgIGZvcih2YXIgaj0wO2o8T2JqZWN0LmtleXMob2JqKS5sZW5ndGg7aisrKXsNCiAgICAgICAgICAgICAgICB2YXIgY29iaj0gb2JqW09iamVjdC5rZXlzKG9iailbal1dW2FdOw0KICAgICAgICAgICAgICAgIGlmKGNvYmopew0KICAgICAgICAgICAgICAgICAgICBvYmo9Y29iajsNCiAgICAgICAgICAgICAgICAgICAgY29udGludWUNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICAgICAgcmV0dXJuIG9iag0KICAgIH1lbHNlew0KICAgICAgICB2YXIgb2JqPWRhdGFUcmVlW21haW5dOw0KICAgICAgICByZXR1cm4gb2JqDQogICAgfQ0KDQp9DQpmb3IodmFyIGk9MDtpPHNoYXBlLmxlbmd0aDtpKyspew0KICAgIHNoYXBlW2ldLm9uY2xpY2s9ZnVuY3Rpb24gKCkgew0KICAgICAgICB2YXIgaWQ9TnVtYmVyKHRoaXMuZ2V0QXR0cmlidXRlKCdlZDp0b2d0b3BpY2lkJykpOw0KICAgICAgICB2YXIgb2JqPWdldG9iaihpZCk7DQoNCiAgICAgICAgdmFyIHR5cGU9b2JqLnRvZ3R5cGU9PT0nbWludXMnPydwbHVzJzonbWludXMnOw0KICAgICAgICB2YXIgZGlzcGxheT1vYmoudG9ndHlwZT09PSdtaW51cyc/J25vbmUnOidibG9jayc7DQogICAgICAgIHRoaXMuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3VzZScpWzBdLnNldEF0dHJpYnV0ZSgneGxpbms6aHJlZicsJyMnK3R5cGUpOw0KICAgICAgICBvYmoudG9ndHlwZT10eXBlOw0KICAgICAgICBjaGVja0lEPW9iajsNCg0KICAgICAgICB1dGQob2JqLGlkLGRpc3BsYXkpOw0KICAgICAgICBleHRyYVJlbGFGaW4oKTsNCiAgICB9DQp9DQpmdW5jdGlvbiB1dGQob2JqLGlkLHNob3csb2MpIHsNCg0KICAgIHZhciBwc2hvdz1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSE9PSAnbm9uZSc/J2Jsb2NrJzonbm9uZSc7DQogICAgaWYgKG9iai5yZWxhZnJvbSl7DQogICAgICAgIGlmKG9iai5yZWxhZnJvbS5kaXNwbGF5IT09IHBzaG93KXsNCiAgICAgICAgICAgIHZhciByZWxhZnJvbXM9T2JqZWN0LmtleXMob2JqLnJlbGFmcm9tKTsNCiAgICAgICAgICAgIHJlbGFmcm9tcy5zcGxpY2UocmVsYWZyb21zLmluZGV4T2YoJ2Rpc3BsYXknKSwxKTsNCiAgICAgICAgICAgIGZvcih2YXIgaz0wO2s8cmVsYWZyb21zLmxlbmd0aDtrKyspew0KICAgICAgICAgICAgICAgIHZhciBkPXJlbGFmcm9tc1trXTsNCiAgICAgICAgICAgICAgICBleHRyYVJlbGFbZF0uaXNDPXRydWU7DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvYmoucmVsYWZyb20uZGlzcGxheSA9IHBzaG93Ow0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChvYmoucmVsYXRvKXsNCiAgICAgICAgaWYob2JqLnJlbGF0by5kaXNwbGF5IT09IHBzaG93KXsNCiAgICAgICAgICAgIHZhciByZWxhdG9zPU9iamVjdC5rZXlzKG9iai5yZWxhdG8pOw0KICAgICAgICAgICAgcmVsYXRvcy5zcGxpY2UocmVsYXRvcy5pbmRleE9mKCdkaXNwbGF5JyksMSk7DQogICAgICAgICAgICBmb3IodmFyIGs9MDtrPHJlbGF0b3MubGVuZ3RoO2srKyl7DQogICAgICAgICAgICAgICAgdmFyIGQ9cmVsYXRvc1trXTsNCiAgICAgICAgICAgICAgICBleHRyYVJlbGFbZF0uaXNDPXRydWU7DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvYmoucmVsYXRvLmRpc3BsYXkgPSBwc2hvdzsNCiAgICAgICAgfQ0KICAgIH0NCiAgICBpZihvYmouY2FsbCl7DQogICAgICAgIHZhciBjYWxscz1PYmplY3Qua2V5cyhvYmouY2FsbCk7DQogICAgICAgIGlmKGNoZWNrSUQhPT1vYmopew0KICAgICAgICAgICAgZm9yKHZhciBpPTA7aSA8IGNhbGxzLmxlbmd0aDtpKyspew0KICAgICAgICAgICAgICAgIHZhciBhPWNhbGxzW2ldLnNsaWNlKDEpOw0KICAgICAgICAgICAgICAgIHZhciBiPW9iai5jYWxsW2NhbGxzW2ldXTsNCiAgICAgICAgICAgICAgICB2YXIgYz1iLnRvZ3R5cGU7DQogICAgICAgICAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYSkuc3R5bGUuZGlzcGxheT1zaG93Ow0KICAgICAgICAgICAgICAgIGlmIChiLnJlbGFmcm9tJiYhYyl7DQogICAgICAgICAgICAgICAgICAgIGlmKGIucmVsYWZyb20uZGlzcGxheSE9PSBzaG93KXsNCiAgICAgICAgICAgICAgICAgICAgICAgIHZhciByZWxhZnJvbXM9T2JqZWN0LmtleXMoYi5yZWxhZnJvbSk7DQogICAgICAgICAgICAgICAgICAgICAgICByZWxhZnJvbXMuc3BsaWNlKHJlbGFmcm9tcy5pbmRleE9mKCdkaXNwbGF5JyksMSk7DQogICAgICAgICAgICAgICAgICAgICAgICBmb3IodmFyIGs9MDtrPHJlbGFmcm9tcy5sZW5ndGg7aysrKXsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YXIgZD1yZWxhZnJvbXNba107DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQz10cnVlOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgYi5yZWxhZnJvbS5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBpZiAoYi5yZWxhdG8mJiFjKXsNCiAgICAgICAgICAgICAgICAgICAgaWYoYi5yZWxhdG8uZGlzcGxheSE9PSBzaG93KXsNCiAgICAgICAgICAgICAgICAgICAgICAgIHZhciByZWxhdG9zPU9iamVjdC5rZXlzKGIucmVsYXRvKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIHJlbGF0b3Muc3BsaWNlKHJlbGF0b3MuaW5kZXhPZignZGlzcGxheScpLDEpOw0KICAgICAgICAgICAgICAgICAgICAgICAgZm9yKHZhciBrPTA7azxyZWxhdG9zLmxlbmd0aDtrKyspew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZhciBkPXJlbGF0b3Nba107DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQz10cnVlOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgYi5yZWxhdG8uZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYoYyl7DQogICAgICAgICAgICAgICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciK2ErIiddIikuc3R5bGUuZGlzcGxheT1zaG93Ow0KICAgICAgICAgICAgICAgICAgICBpZihjPT09J21pbnVzJyl7DQogICAgICAgICAgICAgICAgICAgICAgICB1dGQoYixhLHNob3cpDQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgaWYgKChiLmNhbGx8fGIuYm91bmRhcnl8fGIuc3VtbWFyeSkmJmM9PT0ncGx1cycpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdyx0cnVlKQ0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmKGIuY2FsbCYmIWMpIHsNCiAgICAgICAgICAgICAgICAgICAgdXRkKGIsYSxzaG93LHRydWUpDQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmIChiLnN1bW1hcnkmJiFjKSB7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYgKGIuYm91bmRhcnkmJiFjKSB7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQoNCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIH0NCiAgICBpZihvYmouc3VtbWFyeSl7DQogICAgICAgIHZhciBzdW1tYXJ5cz1PYmplY3Qua2V5cyhvYmouc3VtbWFyeSk7DQogICAgICAgIGlmKChjaGVja0lEIT09b2JqJiYob2JqLnRvZ3R5cGU9PT0nbWludXMnfHwhb2JqLnRvZ3R5cGUpKXx8Y2hlY2tJRD09PW9iail7DQogICAgICAgICAgICBmb3IodmFyIGk9MDtpPHN1bW1hcnlzLmxlbmd0aDtpKyspew0KICAgICAgICAgICAgICAgIHZhciBhPXN1bW1hcnlzW2ldLnNsaWNlKDEpOw0KCQkJCXZhciBvc3AgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5nZXRBdHRyaWJ1dGUoJ2VkOnBhcmVudGlkJyk7DQogICAgICAgICAgICAgICAgaWYob3NwLm1hdGNoKC9cLC8pKXsNCiAgICAgICAgICAgICAgICAgICAgdmFyIG9zcGEgPSBvc3Auc3BsaXQoJywnKTsNCiAgICAgICAgICAgICAgICAgICAgdmFyIG9zcEw9MDsNCg0KICAgICAgICAgICAgICAgICAgICBmb3IodmFyIGo9MDtqPG9zcGEubGVuZ3RoO2orKyl7DQogICAgICAgICAgICAgICAgICAgICAgICBpZihzaG93ID09ICdub25lJyl7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQob3NwYVtqXSkuc3R5bGUuZGlzcGxheSAhPSAnbm9uZScpew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9ZWxzZXsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb3NwTCsrOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIH1lbHNlew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZihkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5zdHlsZS5kaXNwbGF5ICE9ICdub25lJyl7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfWVsc2V7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBvc3BMKys7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIH0NCg0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgIGlmKG9zcEwgIT09IG9zcGEubGVuZ3RoKXsNCiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlOw0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIHZhciBiPW9iai5zdW1tYXJ5W3N1bW1hcnlzW2ldXTsNCiAgICAgICAgICAgICAgICAvLyBjb25zb2xlLmxvZyhhKTsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5zdHlsZS5kaXNwbGF5PXNob3c7DQovLyAgICAgICAgICAgICAgICBpZihjKXsNCi8vICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6dG9ndG9waWNpZD0nIithKyInXSIpLnN0eWxlLmRpc3BsYXk9c2hvdzsNCi8vICAgICAgICAgICAgICAgICAgICBpZihjPT09J21pbnVzJyl7DQovLyAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLHNob3cpDQovLyAgICAgICAgICAgICAgICAgICAgfQ0KLy8gICAgICAgICAgICAgICAgICAgIGlmIChiLmNhbGwmJmM9PT0ncGx1cycpIHsNCi8vICAgICAgICAgICAgICAgICAgICAgICAgdXRkKGIsc2hvdyx0cnVlKQ0KLy8gICAgICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIGlmKGIuY2FsbCYmIWMpIHsNCi8vICAgICAgICAgICAgICAgICAgICB1dGQoYixzaG93LHRydWUpDQovLyAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYoT2JqZWN0LmtleXMoYikubGVuZ3RoIT09MCl7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQogICAgaWYob2JqLmJvdW5kYXJ5KXsNCiAgICAgICAgdmFyIGJvdW5kYXJ5cz1PYmplY3Qua2V5cyhvYmouYm91bmRhcnkpOw0KICAgICAgICBpZihjaGVja0lEIT09b2JqKXsNCiAgICAgICAgICAgIGZvcih2YXIgaT0wO2k8Ym91bmRhcnlzLmxlbmd0aDtpKyspew0KICAgICAgICAgICAgICAgIHZhciBhPWJvdW5kYXJ5c1tpXS5zbGljZSgxKTsNCiAgICAgICAgICAgICAgICB2YXIgYj1vYmouYm91bmRhcnlbYm91bmRhcnlzW2ldXTsNCiAgICAgICAgICAgICAgICAvLyBjb25zb2xlLmxvZyhhKTsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5zdHlsZS5kaXNwbGF5PXNob3c7DQovLyAgICAgICAgICAgICAgICBpZihjKXsNCi8vICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6dG9ndG9waWNpZD0nIithKyInXSIpLnN0eWxlLmRpc3BsYXk9c2hvdzsNCi8vICAgICAgICAgICAgICAgICAgICBpZihjPT09J21pbnVzJyl7DQovLyAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLHNob3cpDQovLyAgICAgICAgICAgICAgICAgICAgfQ0KLy8gICAgICAgICAgICAgICAgICAgIGlmIChiLmNhbGwmJmM9PT0ncGx1cycpIHsNCi8vICAgICAgICAgICAgICAgICAgICAgICAgdXRkKGIsc2hvdyx0cnVlKQ0KLy8gICAgICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIH0NCi8vICAgICAgICAgICAgICAgIGlmKGIuY2FsbCYmIWMpIHsNCi8vICAgICAgICAgICAgICAgICAgICB1dGQoYixzaG93LHRydWUpDQovLyAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYoT2JqZWN0LmtleXMoYikubGVuZ3RoIT09MCl7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdykNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQogICAgaWYoIW9jJiZvYmouY2hpbGQpIHsNCiAgICAgICAgdmFyIGNoaWxkcyA9IE9iamVjdC5rZXlzKG9iai5jaGlsZCk7DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgY2hpbGRzLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgYSA9IGNoaWxkc1tpXS5zbGljZSgxKTsNCiAgICAgICAgICAgIHZhciBiID0gb2JqLmNoaWxkW2NoaWxkc1tpXV07DQogICAgICAgICAgICB2YXIgYyA9IGIudG9ndHlwZTsNCiAgICAgICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGEpLnN0eWxlLmRpc3BsYXkgPSBzaG93Ow0KCQkJdmFyIHRTUGF0aCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoInBhdGhbZWRcXDp0b3N1cGVyaWQ9JyIrYSsiJ10iKTsNCiAgICAgICAgICAgIGlmKHRTUGF0aCl7DQogICAgICAgICAgICAgICAgdFNQYXRoLnN0eWxlLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgfQ0KCQkJdmFyIG5vdGVUaXAgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6bm90ZXRvPSciK2ErIiddIik7DQogICAgICAgICAgICBpZihub3RlVGlwKXsNCiAgICAgICAgICAgICAgICBub3RlVGlwLnN0eWxlLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgaWYgKGIucmVsYWZyb20mJiFjKXsNCiAgICAgICAgICAgICAgICBpZihiLnJlbGFmcm9tLmRpc3BsYXkhPT0gc2hvdyl7DQogICAgICAgICAgICAgICAgICAgIHZhciByZWxhZnJvbXM9T2JqZWN0LmtleXMoYi5yZWxhZnJvbSk7DQogICAgICAgICAgICAgICAgICAgIHJlbGFmcm9tcy5zcGxpY2UocmVsYWZyb21zLmluZGV4T2YoJ2Rpc3BsYXknKSwxKTsNCiAgICAgICAgICAgICAgICAgICAgZm9yKHZhciBrPTA7azxyZWxhZnJvbXMubGVuZ3RoO2srKyl7DQogICAgICAgICAgICAgICAgICAgICAgICB2YXIgZD1yZWxhZnJvbXNba107DQogICAgICAgICAgICAgICAgICAgICAgICBleHRyYVJlbGFbZF0uaXNDPXRydWU7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgYi5yZWxhZnJvbS5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5yZWxhdG8mJiFjKXsNCiAgICAgICAgICAgICAgICBpZihiLnJlbGF0by5kaXNwbGF5IT09IHNob3cpew0KICAgICAgICAgICAgICAgICAgICB2YXIgcmVsYXRvcz1PYmplY3Qua2V5cyhiLnJlbGF0byk7DQogICAgICAgICAgICAgICAgICAgIHJlbGF0b3Muc3BsaWNlKHJlbGF0b3MuaW5kZXhPZignZGlzcGxheScpLDEpOw0KICAgICAgICAgICAgICAgICAgICBmb3IodmFyIGs9MDtrPHJlbGF0b3MubGVuZ3RoO2srKyl7DQogICAgICAgICAgICAgICAgICAgICAgICB2YXIgZD1yZWxhdG9zW2tdOw0KICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQz10cnVlOw0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgIGIucmVsYXRvLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGlmIChjKSB7DQogICAgICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOnRvZ3RvcGljaWQ9JyIgKyBhICsgIiddIikuc3R5bGUuZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICAgICAgaWYgKGMgPT09ICdtaW51cycpIHsNCiAgICAgICAgICAgICAgICAgICAgdXRkKGIsYSxzaG93KQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBpZiAoKGIuY2FsbHx8Yi5ib3VuZGFyeXx8Yi5zdW1tYXJ5KSYmYz09PSdwbHVzJykgew0KICAgICAgICAgICAgICAgICAgICB1dGQoYixhLHNob3csdHJ1ZSkNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5jYWxsJiYhYykgew0KICAgICAgICAgICAgICAgIHV0ZChiLGEsc2hvdyx0cnVlKQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgaWYgKGIuc3VtbWFyeSYmIWMpIHsNCiAgICAgICAgICAgICAgICB1dGQoYixhLHNob3cpDQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5ib3VuZGFyeSYmIWMpIHsNCiAgICAgICAgICAgICAgICB1dGQoYixhLHNob3cpDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQp9DQoNCmZ1bmN0aW9uIGV4dHJhUmVsYUZpbigpIHsNCiAgICB2YXIgZXh0cmFrZXlzPU9iamVjdC5rZXlzKGV4dHJhUmVsYSk7DQogICAgZm9yKHZhciBpPTA7aTxleHRyYWtleXMubGVuZ3RoO2krKyl7DQogICAgICAgIHZhciBleHRyYU9iaj1leHRyYVJlbGFbZXh0cmFrZXlzW2ldXTsNCiAgICAgICAgaWYoZXh0cmFPYmouaXNDID09PSB0cnVlKXsNCiAgICAgICAgICAgIHZhciBmc2hvdz1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChleHRyYU9iai5mcm9taWQpLnN0eWxlLmRpc3BsYXkgIT09J25vbmUnPyB0cnVlOiBmYWxzZTsNCiAgICAgICAgICAgIHZhciB0c2hvdz1kb2N1bWVudC5nZXRFbGVtZW50QnlJZChleHRyYU9iai50b2lkKS5zdHlsZS5kaXNwbGF5ICE9PSdub25lJz8gdHJ1ZTogZmFsc2U7DQogICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChleHRyYU9iai5pZCkuc3R5bGUuZGlzcGxheT1mc2hvdyAmJiB0c2hvdz8gJ2Jsb2NrJzogJ25vbmUnOw0KICAgICAgICAgICAgZXh0cmFSZWxhW2V4dHJha2V5c1tpXV0uaXNDID0gZmFsc2U7DQogICAgICAgIH0NCiAgICB9DQp9'))</script>
+  </body>
+</html>
