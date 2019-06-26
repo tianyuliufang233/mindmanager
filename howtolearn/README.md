@@ -5,7 +5,8 @@
 [四、总结](https://lzktest.github.io/mindmanager/howtolearn/summarize.html)  
 
 ## 个人总结
-**最终目标是构建信息网络**
+
+__最终目标:   构建知识网络__
 
 学习过程主要步骤：  
 步骤不用按照顺序来
